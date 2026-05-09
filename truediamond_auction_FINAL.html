@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>True Diamond — Live E-Auction</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#B8963E;--gold-light:#D4B26A;--gold-pale:#F5EDD8;
+  --dark:#1A1410;--charcoal:#4A3F35;--stone:#8A7D72;
+  --cream:#FAF7F2;--white:#FFFFFF;--green:#2E7D5E;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);min-height:100vh}
+
+/* HEADER */
+header{background:var(--dark);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100}
+.logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--gold-light);letter-spacing:0.12em;text-transform:uppercase}
+.live-pill{display:flex;align-items:center;gap:7px;background:rgba(46,125,94,0.2);border:1px solid var(--green);color:#5DBF97;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:20px}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#5DBF97;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.85)}}
+
+/* HERO */
+.hero{background:var(--dark);padding:3.5rem 2rem 3rem;text-align:center;border-bottom:1px solid rgba(184,150,62,0.25)}
+.hero-eyebrow{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,52px);font-weight:300;color:var(--white);line-height:1.15;margin-bottom:1rem}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero-sub{font-size:14px;color:var(--stone);max-width:480px;margin:0 auto 2rem;line-height:1.7}
+.auction-meta{display:inline-flex;gap:2rem;border:1px solid rgba(184,150,62,0.3);border-radius:4px;padding:12px 24px}
+.meta-label{font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:var(--stone);display:block;margin-bottom:3px}
+.meta-value{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold-light)}
+
+/* RULES */
+.rules-strip{background:var(--gold-pale);border-bottom:1px solid rgba(184,150,62,0.3);padding:10px 2rem;display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+.rule{font-size:12px;color:var(--charcoal);display:flex;align-items:center;gap:6px}
+
+/* GRID */
+.products-section{max-width:1200px;margin:0 auto;padding:3rem 1.5rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--stone);margin-bottom:2rem;display:flex;align-items:center;gap:12px}
+.section-title::after{content:'';flex:1;height:1px;background:rgba(138,125,114,0.3)}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem}
+
+/* CARD */
+.card{background:var(--white);border:1px solid rgba(184,150,62,0.15);border-radius:2px;overflow:hidden;transition:box-shadow 0.3s,transform 0.3s;position:relative}
+.card:not(.sold-out):hover{box-shadow:0 12px 40px rgba(26,20,16,0.12);transform:translateY(-3px)}
+.card-img-wrap{position:relative;aspect-ratio:1;overflow:hidden;background:#F8F5F0}
+.card-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s}
+.card:not(.sold-out):hover .card-img-wrap img{transform:scale(1.04)}
+.lot-badge{position:absolute;top:12px;left:12px;background:var(--dark);color:var(--gold-light);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;padding:4px 10px;border-radius:2px}
+.timer-badge{position:absolute;bottom:12px;right:12px;background:rgba(26,20,16,0.85);color:var(--white);font-size:12px;padding:5px 10px;border-radius:2px}
+.sold-out-overlay{display:none;position:absolute;inset:0;background:rgba(26,20,16,0.6);align-items:center;justify-content:center}
+.card.sold-out .sold-out-overlay{display:flex}
+.sold-out-badge{background:var(--dark);border:1px solid var(--gold);color:var(--gold-light);font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;letter-spacing:0.2em;text-transform:uppercase;padding:10px 24px;border-radius:2px}
+.card-body{padding:1.25rem}
+.card-name{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--dark);line-height:1.3;margin-bottom:1rem}
+.bid-section{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid rgba(184,150,62,0.15)}
+.bid-label{font-size:10px;text-transform:uppercase;letter-spacing:0.12em;color:var(--stone);margin-bottom:3px}
+.bid-amount{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--dark);line-height:1}
+.bid-count{font-size:11px;color:var(--stone);text-align:right}
+.bid-count span{display:block;font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold);font-weight:600;line-height:1}
+.bid-btn{display:block;width:100%;padding:11px;background:var(--dark);color:var(--gold-light);border:none;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;text-align:center;border-radius:2px;transition:background 0.2s}
+.bid-btn:hover{background:var(--charcoal)}
+.bid-btn.sold{background:#ccc;color:#888;cursor:not-allowed}
+
+/* BID OVERLAY */
+.overlay{display:none;position:fixed;inset:0;background:rgba(26,20,16,0.72);z-index:200;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(3px)}
+.overlay.open{display:flex}
+.modal{background:var(--white);border-radius:4px;width:100%;max-width:420px;overflow:hidden;animation:slideUp 0.22s ease}
+@keyframes slideUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.modal-header{background:var(--dark);padding:1.25rem 1.5rem;display:flex;align-items:flex-start;justify-content:space-between}
+.modal-lot{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.modal-product-name{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--white);font-weight:300;line-height:1.3;max-width:300px}
+.modal-close{background:none;border:none;color:var(--stone);font-size:20px;cursor:pointer;padding:0 0 0 12px;flex-shrink:0;transition:color 0.15s}
+.modal-close:hover{color:var(--white)}
+.modal-current-bid{background:var(--gold-pale);padding:10px 1.5rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(184,150,62,0.2)}
+.mcb-label{font-size:11px;color:var(--charcoal)}
+.mcb-amount{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--dark)}
+.modal-body{padding:1.5rem}
+.field{margin-bottom:1rem}
+.field label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--stone);margin-bottom:6px}
+.field input{width:100%;padding:10px 12px;border:1px solid rgba(138,125,114,0.4);border-radius:2px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--dark);background:var(--cream);outline:none;transition:border-color 0.2s}
+.field input:focus{border-color:var(--gold)}
+.field-hint{font-size:11px;color:var(--stone);margin-top:5px}
+.error-msg{font-size:12px;color:#C0392B;margin-top:10px;display:none}
+.modal-actions{display:flex;gap:10px;margin-top:1.25rem}
+.btn-cancel{flex:1;padding:11px;background:transparent;border:1px solid rgba(138,125,114,0.4);color:var(--stone);font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:2px}
+.btn-cancel:hover{border-color:var(--charcoal);color:var(--charcoal)}
+.btn-submit{flex:2;padding:11px;background:var(--dark);color:var(--gold-light);border:none;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:background 0.2s}
+.btn-submit:hover{background:var(--charcoal)}
+.success-view{display:none;padding:2.5rem 1.5rem;text-align:center}
+.success-icon{font-size:44px;color:var(--green);margin-bottom:1rem}
+.success-title{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--dark);margin-bottom:8px}
+.success-sub{font-size:13px;color:var(--stone);line-height:1.7;margin-bottom:1.5rem}
+
+/* FOOTER */
+.refresh-note{text-align:center;font-size:12px;color:var(--stone);margin-top:2rem;display:flex;align-items:center;justify-content:center;gap:6px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin{display:inline-block;animation:spin 2s linear infinite}
+.card-name-link{text-decoration:none}
+.card-name-link:hover .card-name{color:var(--gold)}
+footer{background:var(--dark);padding:2rem;text-align:center;color:var(--stone);font-size:12px;margin-top:2rem}
+footer a{color:var(--gold);text-decoration:none}
+
+/* ADMIN PANEL */
+#admin-panel{display:none;position:fixed;bottom:24px;right:24px;z-index:999;background:#1A1410;border:1px solid #B8963E;border-radius:6px;padding:1.5rem;width:340px;box-shadow:0 8px 40px rgba(0,0,0,0.5);max-height:90vh;overflow-y:auto}
+.admin-title{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold-light);margin-bottom:1.25rem;display:flex;justify-content:space-between;align-items:center}
+.admin-close-btn{background:none;border:none;color:var(--stone);font-size:18px;cursor:pointer}
+.admin-section{margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid #2C2318}
+.admin-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.admin-label{font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:var(--stone);margin-bottom:8px;display:block}
+.admin-input{width:100%;padding:8px 10px;background:#2C2318;border:1px solid #4A3F35;color:#FAF7F2;border-radius:3px;font-size:13px;font-family:'DM Sans',sans-serif;margin-bottom:8px}
+.admin-input:focus{outline:none;border-color:var(--gold)}
+.admin-btn{padding:8px 14px;border:none;border-radius:3px;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer}
+.admin-btn-gold{background:var(--gold);color:#1A1410}
+.admin-btn-ghost{background:transparent;border:1px solid #4A3F35;color:var(--stone)}
+.admin-btn-red{background:#7B2020;color:#FAF7F2}
+.admin-btn-green{background:#1E5C3C;color:#5DBF97}
+.product-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #2C2318;font-size:12px;color:#FAF7F2}
+.product-row:last-child{border-bottom:none}
+.product-row-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px}
+.admin-hint{font-size:11px;color:#4A3F35;margin-top:6px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">True Diamond</div>
+  <div class="live-pill"><span class="live-dot"></span> Live Auction</div>
+</header>
+
+<div class="hero">
+  <p class="hero-eyebrow">True Diamond E-Auction</p>
+  <h1>Bid on <em>Certified</em><br>Lab-Grown Diamonds</h1>
+  <p class="hero-sub">Exclusive pieces at starting prices. Place your bid, win the ring, choose your preference after.</p>
+  <div class="auction-meta">
+    <div class="meta-item"><span class="meta-label">Auction ends in</span><div class="meta-value" id="global-timer">--:--:--</div></div>
+    <div class="meta-item"><span class="meta-label">Lots available</span><div class="meta-value" id="lot-count">4</div></div>
+    <div class="meta-item"><span class="meta-label">Bid increment</span><div class="meta-value">₹1,000</div></div>
+  </div>
+</div>
+
+<div class="rules-strip">
+  <div class="rule"><span style="color:var(--gold)">◆</span> Bids in multiples of ₹1,000 only</div>
+  <div class="rule"><span style="color:var(--gold)">◆</span> Winner contacted within 2 hours</div>
+  <div class="rule"><span style="color:var(--gold)">◆</span> Preference confirmed on call</div>
+  <div class="rule"><span style="color:var(--gold)">◆</span> All diamonds GIA / IGI certified</div>
+</div>
+
+<div class="products-section">
+  <div class="section-title">Live lots</div>
+  <div class="products-grid" id="grid"></div>
+  <div class="refresh-note"><span class="spin">↻</span> Highest bid refreshes every 30 seconds</div>
+</div>
+
+<footer>
+  Questions? Call <a href="tel:9076009085">9076009085</a> &nbsp;|&nbsp;
+  <a href="https://wa.me/919076009085">WhatsApp us</a> &nbsp;|&nbsp;
+  <a href="https://truediamond.in">truediamond.in</a>
+</footer>
+
+<!-- BID OVERLAY -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-lot" id="modal-lot"></div>
+        <div class="modal-product-name" id="modal-name"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-current-bid">
+      <span class="mcb-label">Current highest bid</span>
+      <span class="mcb-amount" id="modal-bid"></span>
+    </div>
+    <div id="form-view">
+      <div class="modal-body">
+        <div class="field"><label>Your full name</label><input type="text" id="f-name" placeholder="e.g. Priya Sharma"/></div>
+        <div class="field"><label>Phone number</label><input type="tel" id="f-phone" placeholder="+91 98765 43210"/></div>
+        <div class="field">
+          <label>Your bid amount (₹)</label>
+          <input type="number" id="f-bid" step="1000"/>
+          <div class="field-hint" id="f-hint"></div>
+        </div>
+        <div class="error-msg" id="f-error"></div>
+        <div class="modal-actions">
+          <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+          <button class="btn-submit" onclick="submitBid()">Submit bid →</button>
+        </div>
+      </div>
+    </div>
+    <div class="success-view" id="success-view">
+      <div class="success-icon">✓</div>
+      <div class="success-title">Bid submitted!</div>
+      <p class="success-sub">Your bid is recorded. If you're outbid, our team will reach out on WhatsApp so you can place a higher bid.</p>
+      <button class="btn-submit" style="width:100%" onclick="closeModal()">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-panel">
+  <div class="admin-title">
+    ⚙ Admin Panel
+    <button class="admin-close-btn" onclick="toggleAdmin()">✕</button>
+  </div>
+
+  <!-- Timer -->
+  <div class="admin-section">
+    <span class="admin-label">⏱ Auction end time</span>
+    <input type="datetime-local" id="admin-datetime" class="admin-input"/>
+    <button class="admin-btn admin-btn-gold" onclick="applyTimer()">Set timer</button>
+    <p class="admin-hint">Press Ctrl+Shift+A to open/close this panel</p>
+  </div>
+
+  <!-- Add product -->
+  <div class="admin-section">
+    <span class="admin-label">➕ Add product</span>
+    <input type="text" id="ap-name" class="admin-input" placeholder="Product name (e.g. Diamond Ring 1ct)"/>
+    <input type="number" id="ap-price" class="admin-input" placeholder="Starting bid in ₹ (e.g. 55000)"/>
+    <input type="number" id="ap-mrp" class="admin-input" placeholder="MRP in ₹ (e.g. 75000)"/>
+    <input type="text" id="ap-image" class="admin-input" placeholder="Image URL (paste from your website)"/>
+    <input type="text" id="ap-form" class="admin-input" placeholder="Product page URL (for View Details link)"/>
+    <button class="admin-btn admin-btn-gold" onclick="addProduct()" style="width:100%">Add to auction</button>
+  </div>
+
+  <!-- Manage products -->
+  <div class="admin-section">
+    <span class="admin-label">📦 Manage products</span>
+    <div id="admin-product-list"></div>
+  </div>
+</div>
+
+<script>
+// ── GOOGLE FORM CONFIG ──
+const FORM_ACTION  = 'https://docs.google.com/forms/d/e/1FAIpQLSfFXoSUqZAGOkMlm2VgYy_rJrETdquJt9ToieqUGd1Aut9sqw/formResponse';
+const ENTRY_NAME    = 'entry.1994883387';
+const ENTRY_PHONE   = 'entry.684132721';
+const ENTRY_PRODUCT = 'entry.1454359488';
+const ENTRY_BID     = 'entry.1346253749';
+
+// ── AUCTION TIMER ──
+// Default end time — change this date or use Admin Panel (Ctrl+Shift+A) to override live
+const DEFAULT_END = new Date('2026-05-15T23:59:00+05:30'); // ← UPDATE THIS DATE
+let AUCTION_END = localStorage.getItem('td_auction_end')
+  ? new Date(localStorage.getItem('td_auction_end'))
+  : DEFAULT_END;
+
+// ── DEFAULT PRODUCTS ──
+const DEFAULT_PRODUCTS = [
+  { lot:'Lot 01', name:"Diamond True Pave' Halo 0.65 Ct Solitaire Ring",            image:'https://truediamond.in/cdn/shop/files/Solitaire_8_not_found.png?v=1767876574',                                     startingBid:57651,  mrp:57651,  formProduct:'Diamond True Pave Halo 0.65 Ct Solitaire Ring',              productUrl:'https://truediamond.in/collections/solitaires-collection/products/cdi-rn-cr-146',                          soldOut:false, hidden:false },
+  { lot:'Lot 02', name:"Everlasting Love 1 Ct Round Solitaire Ring",                 image:'https://truediamond.in/cdn/shop/files/TD04250349.png?v=1769285532',                                                 startingBid:62958,  mrp:62958,  formProduct:'Everlasting Love 1 Ct Round Solitaire Ring',                 productUrl:'https://truediamond.in/collections/solitaires-collection/products/1-ct-everlasting-love-round-solitaire-ring', soldOut:false, hidden:false },
+  { lot:'Lot 03', name:"Diamond Round Cushion Halo 0.6 Ct Solitaire Engagement Ring",image:'https://truediamond.in/cdn/shop/files/Solitaire_19.png?v=1767876491',                                               startingBid:115198, mrp:115198, formProduct:'Diamond Round Cushion Halo 0.6 Ct Solitaire Engagement Ring', productUrl:'https://truediamond.in/collections/solitaires-collection/products/cdi-rn-cr-182',                          soldOut:false, hidden:false },
+  { lot:'Lot 04', name:"Diamond Twisted Princess Halo Engagement Ring",              image:'https://truediamond.in/cdn/shop/files/CDI-RN-CR-244-YG-PV_43486ec8-bfe2-419c-8e8e-fbf8e385ea23.png?v=1771357327', startingBid:66865,  mrp:66865,  formProduct:'Diamond Twisted Princess Halo Engagement Ring',              productUrl:'https://truediamond.in/collections/solitaires-collection/products/cdi-rn-cr-244',                          soldOut:false, hidden:false },
+];
+
+// ── SHEET CSV URL ──
+const SHEET_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSC6yZ03FjIEddjyyJJQbQ983Cl0901sPWSkxF3W7-Civ1-yZjxiKXTsAvxS3dR6zaqTrnXafYD2d0C/pub?gid=0&single=true&output=csv';
+
+async function fetchBids() {
+  try {
+    const res = await fetch(SHEET_CSV + '&t=' + Date.now());
+    const text = await res.text();
+    const rows = text.trim().split('\n').slice(1); // skip header row
+
+    // Form response columns: Timestamp, Name, Phone, Product, Bid Amount
+    const maxBids = {}, counts = {};
+    rows.forEach(row => {
+      // Handle commas inside quoted fields
+      const cols = row.match(/(".*?"|[^,]+)(?=,|$)/g) || row.split(',');
+      const clean = c => (c || '').trim().replace(/^"|"$/g, '');
+      const product = clean(cols[3]);
+      const bid     = parseFloat(clean(cols[4]).replace(/,/g, ''));
+      if (product && !isNaN(bid) && bid > 0) {
+        if (!maxBids[product] || bid > maxBids[product]) maxBids[product] = bid;
+        counts[product] = (counts[product] || 0) + 1;
+      }
+    });
+
+    // Update highest bids and counts
+    Object.keys(maxBids).forEach(product => {
+      if (maxBids[product] > (highestBids[product] || 0)) {
+        highestBids[product] = maxBids[product];
+      }
+    });
+    Object.keys(counts).forEach(product => {
+      bidCounts[product] = counts[product];
+    });
+
+    // Update displayed values
+    products.forEach((p, i) => {
+      const bEl = document.getElementById('b' + i);
+      const cEl = document.getElementById('c' + i);
+      if (bEl && highestBids[p.formProduct]) bEl.textContent = INR(highestBids[p.formProduct]);
+      if (cEl && bidCounts[p.formProduct])   cEl.textContent = bidCounts[p.formProduct];
+    });
+  } catch(e) {
+    console.log('Sheet fetch error:', e.message);
+  }
+}
+const saved = localStorage.getItem('td_products');
+if (saved) {
+  const parsed = JSON.parse(saved);
+  if (parsed.length > 0 && !parsed[0].productUrl) {
+    localStorage.removeItem('td_products');
+  }
+}
+
+// Load saved products or use defaults
+let products = localStorage.getItem('td_products')
+  ? JSON.parse(localStorage.getItem('td_products'))
+  : JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
+
+const highestBids = {}, bidCounts = {};
+products.forEach(p => { highestBids[p.formProduct] = p.startingBid; bidCounts[p.formProduct] = 0; });
+
+let active = null;
+const INR = n => '₹' + Math.round(n).toLocaleString('en-IN');
+
+function saveProducts() { localStorage.setItem('td_products', JSON.stringify(products)); }
+
+function timeLeft() {
+  const d = AUCTION_END - Date.now();
+  if (d <= 0) return 'Ended';
+  const h = Math.floor(d/3600000), m = Math.floor((d%3600000)/60000), s = Math.floor((d%60000)/1000);
+  return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}
+
+function render() {
+  const visible = products.filter(p => !p.hidden);
+  document.getElementById('lot-count').textContent = visible.filter(p => !p.soldOut).length;
+  document.getElementById('grid').innerHTML = visible.map((p) => {
+    const realIdx = products.indexOf(p);
+    return `
+    <div class="card${p.soldOut ? ' sold-out' : ''}" id="card-${realIdx}">
+      <div class="card-img-wrap" ${p.productUrl ? `data-url="${p.productUrl}" style="cursor:pointer"` : ''}>
+        <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'"/>
+        <div class="sold-out-overlay"><div class="sold-out-badge">Sold Out</div></div>
+        <div class="lot-badge">${p.lot}</div>
+        <div class="timer-badge">◷ <span id="t${realIdx}">${timeLeft()}</span></div>
+      </div>
+      <div class="card-body">
+        ${p.productUrl
+          ? `<a href="${p.productUrl}" target="_blank" class="card-name-link"><p class="card-name">${p.name}</p></a>`
+          : `<p class="card-name">${p.name}</p>`}
+        <div class="bid-section">
+          <div><div class="bid-label">Highest bid</div><div class="bid-amount" id="b${realIdx}">${INR(highestBids[p.formProduct] || p.startingBid)}</div></div>
+          <div>
+            <div class="bid-label">MRP</div>
+            <div class="bid-amount">${INR(p.mrp || p.startingBid)}</div>
+          </div>
+        </div>
+        ${p.soldOut
+          ? `<button class="bid-btn sold" disabled>Sold Out</button>`
+          : `<button class="bid-btn" onclick="openModal(${realIdx})">Place your bid →</button>`}
+        <a href="${p.productUrl || '#'}" target="_blank" style="display:block;width:100%;margin-top:8px;padding:10px;text-align:center;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--stone);border:1px solid rgba(138,125,114,0.35);border-radius:2px;text-decoration:none;font-family:'DM Sans',sans-serif;box-sizing:border-box;transition:color 0.2s,border-color 0.2s;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='var(--gold)'" onmouseout="this.style.color='var(--stone)';this.style.borderColor='rgba(138,125,114,0.35)'">View Product</a>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Attach image click handlers via JS (avoids quote-escaping issues)
+  products.forEach((p) => {
+    if (!p.productUrl || p.hidden) return;
+    const realIdx = products.indexOf(p);
+    const wrap = document.querySelector(`#card-${realIdx} .card-img-wrap`);
+    if (wrap) wrap.addEventListener('click', () => window.open(p.productUrl, '_blank'));
+  });
+
+  renderAdminList();
+}
+
+function renderAdminList() {
+  document.getElementById('admin-product-list').innerHTML = products.map((p, i) => `
+    <div class="product-row">
+      <span class="product-row-name" title="${p.name}">${p.lot} — ${p.name.substring(0,24)}…</span>
+      <button class="admin-btn ${p.soldOut ? 'admin-btn-ghost' : 'admin-btn-green'}" onclick="toggleSoldOut(${i})" style="font-size:10px;padding:5px 8px">
+        ${p.soldOut ? 'Unsold' : 'Sold'}
+      </button>
+      <button class="admin-btn ${p.hidden ? 'admin-btn-gold' : 'admin-btn-red'}" onclick="toggleHide(${i})" style="font-size:10px;padding:5px 8px">
+        ${p.hidden ? 'Unhide' : 'Hide'}
+      </button>
+    </div>
+  `).join('');
+}
+
+function openModal(i) {
+  const p = products[i];
+  if (p.soldOut || p.removed) return;
+  active = { index: i, product: p };
+  const h = highestBids[p.formProduct] || p.startingBid;
+  document.getElementById('modal-lot').textContent = p.lot;
+  document.getElementById('modal-name').textContent = p.name;
+  document.getElementById('modal-bid').textContent = INR(h);
+  document.getElementById('f-hint').textContent = 'Minimum next bid: ' + INR(h + 1000);
+  document.getElementById('f-bid').placeholder = String(h + 1000);
+  document.getElementById('f-name').value = '';
+  document.getElementById('f-phone').value = '';
+  document.getElementById('f-bid').value = '';
+  document.getElementById('f-error').style.display = 'none';
+  document.getElementById('form-view').style.display = 'block';
+  document.getElementById('success-view').style.display = 'none';
+  document.getElementById('overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('overlay').classList.remove('open');
+  document.body.style.overflow = '';
+  active = null;
+}
+
+function submitBid() {
+  const name   = document.getElementById('f-name').value.trim();
+  const phone  = document.getElementById('f-phone').value.trim();
+  const amount = parseInt(document.getElementById('f-bid').value);
+  const errEl  = document.getElementById('f-error');
+  const h      = highestBids[active.product.formProduct] || active.product.startingBid;
+  errEl.style.display = 'none';
+  if (!name)               { errEl.textContent='Please enter your name.'; errEl.style.display='block'; return; }
+  if (phone.length < 10)   { errEl.textContent='Please enter a valid phone number.'; errEl.style.display='block'; return; }
+  if (!amount||isNaN(amount)){ errEl.textContent='Please enter a bid amount.'; errEl.style.display='block'; return; }
+  if (amount <= h)         { errEl.textContent='Your bid must be higher than '+INR(h); errEl.style.display='block'; return; }
+  if (amount % 1000 !== 0) { errEl.textContent='Bid must be in multiples of ₹1,000.'; errEl.style.display='block'; return; }
+
+  const fd = new FormData();
+  fd.append(ENTRY_NAME, name);
+  fd.append(ENTRY_PHONE, phone);
+  fd.append(ENTRY_PRODUCT, active.product.formProduct);
+  fd.append(ENTRY_BID, amount);
+  fetch(FORM_ACTION, { method:'POST', mode:'no-cors', body:fd }).catch(()=>{});
+
+  highestBids[active.product.formProduct] = amount;
+  bidCounts[active.product.formProduct] = (bidCounts[active.product.formProduct]||0) + 1;
+  const bEl = document.getElementById('b'+active.index);
+  const cEl = document.getElementById('c'+active.index);
+  if (bEl) bEl.textContent = INR(amount);
+  if (cEl) cEl.textContent = bidCounts[active.product.formProduct];
+  document.getElementById('form-view').style.display = 'none';
+  document.getElementById('success-view').style.display = 'block';
+}
+
+// ── ADMIN FUNCTIONS ──
+function toggleAdmin() {
+  const panel = document.getElementById('admin-panel');
+  const isOpen = panel.style.display === 'block';
+  if (!isOpen) {
+    const pad = n => String(n).padStart(2,'0');
+    const d = AUCTION_END;
+    document.getElementById('admin-datetime').value =
+      `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+    renderAdminList();
+  }
+  panel.style.display = isOpen ? 'none' : 'block';
+}
+
+function applyTimer() {
+  const val = document.getElementById('admin-datetime').value;
+  if (!val) return;
+  AUCTION_END = new Date(val);
+  localStorage.setItem('td_auction_end', AUCTION_END.toISOString());
+  alert('✓ Timer set to ' + AUCTION_END.toLocaleString('en-IN'));
+}
+
+function addProduct() {
+  const name  = document.getElementById('ap-name').value.trim();
+  const price = parseInt(document.getElementById('ap-price').value);
+  const mrp   = parseInt(document.getElementById('ap-mrp').value) || price;
+  const image = document.getElementById('ap-image').value.trim();
+  const url   = document.getElementById('ap-form').value.trim();
+  if (!name || !price) { alert('Please enter at least a product name and starting bid.'); return; }
+  const lotNum = products.length + 1;
+  const newP = {
+    lot: 'Lot ' + String(lotNum).padStart(2,'0'),
+    name, image: image || '',
+    startingBid: price, mrp,
+    formProduct: name,
+    productUrl: url || '',
+    soldOut: false, hidden: false
+  };
+  products.push(newP);
+  highestBids[name] = price;
+  bidCounts[name] = 0;
+  saveProducts();
+  render();
+  document.getElementById('ap-name').value = '';
+  document.getElementById('ap-price').value = '';
+  document.getElementById('ap-mrp').value = '';
+  document.getElementById('ap-image').value = '';
+  document.getElementById('ap-form').value = '';
+  alert('✓ ' + name + ' added to auction!');
+}
+
+function toggleHide(i) {
+  products[i].hidden = !products[i].hidden;
+  saveProducts();
+  render();
+}
+
+function toggleSoldOut(i) {
+  products[i].soldOut = !products[i].soldOut;
+  saveProducts();
+  render();
+}
+
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey && e.shiftKey && e.key === 'A') { e.preventDefault(); toggleAdmin(); }
+});
+
+document.getElementById('overlay').addEventListener('click', e => {
+  if (e.target.id === 'overlay') closeModal();
+});
+
+setInterval(() => {
+  document.getElementById('global-timer').textContent = timeLeft();
+  products.forEach((p, i) => { const el = document.getElementById('t'+i); if(el) el.textContent = timeLeft(); });
+}, 1000);
+
+fetchBids();
+setInterval(fetchBids, 30000);
+
+render();
+</script>
+</body>
+</html>
