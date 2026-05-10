@@ -327,12 +327,39 @@ function parseCSVRow(row) {
   let cur = '', inQ = false;
   for (let i = 0; i < row.length; i++) {
     const ch = row[i];
-    if (ch === '"') { inQ = !inQ; continue; }
+    if (ch === '"') {
+      if (inQ && row[i+1] === '"') { cur += '"'; i++; } // escaped quote
+      else { inQ = !inQ; }
+      continue;
+    }
     if (ch === ',' && !inQ) { result.push(cur.trim()); cur = ''; continue; }
+    if ((ch === '\r' || ch === '\n') && !inQ) break;
     cur += ch;
   }
   result.push(cur.trim());
   return result;
+}
+
+// ── SPLIT CSV INTO ROWS (handles quoted newlines) ──
+function parseCSV(text) {
+  const rows = [];
+  let cur = '', inQ = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (ch === '"') {
+      if (inQ && text[i+1] === '"') { cur += '"'; i++; }
+      else { inQ = !inQ; cur += ch; }
+      continue;
+    }
+    if ((ch === '\n') && !inQ) {
+      if (cur.trim()) rows.push(cur.replace(/\r$/, ''));
+      cur = '';
+      continue;
+    }
+    cur += ch;
+  }
+  if (cur.trim()) rows.push(cur);
+  return rows;
 }
 
 // ── FETCH PRODUCTS FROM SHEET ──
@@ -340,7 +367,7 @@ async function fetchProducts() {
   try {
     const res  = await fetch(PRODUCTS_CSV + '&t=' + Date.now());
     const text = await res.text();
-    const rows = text.trim().split('\n').slice(1);
+    const rows = parseCSV(text.trim()).slice(1);
 
     const loaded = [];
     rows.forEach((row, idx) => {
@@ -354,13 +381,26 @@ async function fetchProducts() {
       const auctionEnded= (cols[8] || '').toUpperCase() === 'TRUE';
 
       // Parse end time as IST (UTC+5:30)
+      // Handles: YYYY-MM-DD HH:MM, M/D/YYYY HH:MM:SS, YYYY-MM-DD HH:MM:SS
       let endTime = null;
       const rawEnd = (cols[5] || '').trim();
       if (rawEnd) {
-        // Format: YYYY-MM-DD HH:MM
-        const [datePart, timePart] = rawEnd.split(' ');
-        if (datePart && timePart) {
-          endTime = new Date(datePart + 'T' + timePart + ':00+05:30');
+        let datePart = '', timePart = '';
+        const parts = rawEnd.split(' ');
+        if (parts.length >= 2) {
+          const dp = parts[0];
+          const tp = parts[1];
+          // M/D/YYYY format from Google Sheets
+          if (dp.includes('/')) {
+            const [m, d, y] = dp.split('/');
+            datePart = y + '-' + String(m).padStart(2,'0') + '-' + String(d).padStart(2,'0');
+          } else {
+            datePart = dp; // YYYY-MM-DD
+          }
+          timePart = tp.substring(0, 5); // HH:MM
+          if (datePart && timePart) {
+            endTime = new Date(datePart + 'T' + timePart + ':00+05:30');
+          }
         }
       }
 
@@ -401,7 +441,7 @@ async function fetchBids() {
   try {
     const res  = await fetch(DASHBOARD_CSV + '&t=' + Date.now());
     const text = await res.text();
-    const rows = text.trim().split('\n').slice(1);
+    const rows = parseCSV(text.trim()).slice(1);
 
     // Dashboard CSV: col[0]=Product Name, col[1]=Starting Price, col[2]=Highest Bid, col[3]=Bid Count, col[4]=Winner Name, col[5]=Winner Phone
     rows.forEach(row => {
@@ -543,11 +583,9 @@ function render() {
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
          <div class="img-placeholder" style="display:none">
            <div class="img-placeholder-icon">◆</div>
-           <div class="img-placeholder-lot">${p.lot}</div>
          </div>`
       : `<div class="img-placeholder">
            <div class="img-placeholder-icon">◆</div>
-           <div class="img-placeholder-lot">${p.lot}</div>
          </div>`;
 
     return `
