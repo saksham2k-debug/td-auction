@@ -52,9 +52,8 @@ body{font-family:inherit;background:var(--site-bg);color:var(--site-text);min-he
 .ended-banner span{display:block;font-size:13px;color:rgba(255,255,255,0.4);margin-top:4px}
 
 /* ── RULES STRIP ── */
-.rules-strip{background:var(--gold-pale);border-bottom:1px solid rgba(184,150,62,0.25);padding:11px 2rem;display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap}
-.rule{font-size:12px;color:var(--charcoal);display:flex;align-items:center;gap:6px}
-.rule-dot{color:var(--gold);font-size:10px}
+.rules-strip{background:var(--gold-pale);border-bottom:1px solid rgba(184,150,62,0.25);padding:14px 2rem;text-align:center}
+.rules-text{font-size:12.5px;color:var(--charcoal);max-width:880px;margin:0 auto;line-height:1.65;letter-spacing:0.01em}
 
 /* ── PRODUCTS SECTION ── */
 .products-section{max-width:1280px;margin:0 auto;padding:3rem 1.5rem 2rem}
@@ -219,7 +218,7 @@ body{font-family:inherit;background:var(--site-bg);color:var(--site-text);min-he
       <div class="meta-value" id="global-timer">--:--:--</div>
     </div>
     <div class="meta-item">
-      <span class="meta-label">Bid in multiples of 1000</span>
+      <span class="meta-label">Bid in multiples of</span>
       <div class="meta-value">₹1,000</div>
     </div>
   </div>
@@ -233,10 +232,7 @@ body{font-family:inherit;background:var(--site-bg);color:var(--site-text);min-he
 
 <!-- RULES STRIP -->
 <div class="rules-strip">
-  <div class="rule"><span class="rule-dot">◆</span> Bids in multiples of ₹1,000 only</div>
-  <div class="rule"><span class="rule-dot">◆</span> Winner contacted within 2 hours</div>
-  <div class="rule"><span class="rule-dot">◆</span> Preference confirmed on call</div>
-  <div class="rule"><span class="rule-dot">◆</span> All diamonds GIA / IGI certified</div>
+  <p class="rules-text">Ring pricing is based on a standard size 12 ring in 14KT gold. Ring size can be customised and finalised after the winning bid — any incremental gold weight will be charged additionally on actuals.</p>
 </div>
 
 <!-- PRODUCTS -->
@@ -372,7 +368,7 @@ const ENTRY_PRODUCT = 'entry.1454359488';
 const ENTRY_BID     = 'entry.1346253749';
 const PRODUCTS_CSV  = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSC6yZ03FjIEddjyyJJQbQ983Cl0901sPWSkxF3W7-Civ1-yZjxiKXTsAvxS3dR6zaqTrnXafYD2d0C/pub?gid=2014300735&single=true&output=csv';
 const DASHBOARD_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSC6yZ03FjIEddjyyJJQbQ983Cl0901sPWSkxF3W7-Civ1-yZjxiKXTsAvxS3dR6zaqTrnXafYD2d0C/pub?gid=0&single=true&output=csv';
-const BIDS_CSV      = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSC6yZ03FjIEddjyyJJQbQ983Cl0901sPWSkxF3W7-Civ1-yZjxiKXTsAvxS3dR6zaqTrnXafYD2d0C/pub?gid=257242736&single=true&output=csv'; // Publish Form_Responses tab as CSV and paste URL here
+const BIDS_CSV      = 'REPLACE_WITH_BIDS_TAB_CSV_URL'; // Publish Form_Responses tab as CSV and paste URL here
 const ADMIN_PIN     = '1234';
 const PAGE_SIZE     = 12;
 
