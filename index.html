@@ -268,7 +268,7 @@ body{font-family:inherit;background:var(--site-bg);color:var(--site-text);min-he
       <li>Failure to honour a winning bid may result in disqualification from participating in future auctions.</li>
       <li>The use of coupon codes or discount codes against a winning bid will result in automatic cancellation of the sale.</li>
       <li>Any modifications such as resizing will require a standard processing time of 14 working days.</li>
-      <li>Should you wish to change the ring size, we are happy to remake the design. Any additional gold required will be charged at prevailing market rates.</li>
+      <li>Should you wish to change the ring size, we are happy to remake the design. Any additional gold required will be charged at prevailing market rates, and making charges will be levied at 50% of the original cost as a special accommodation.</li>
       <li>All bids, including the highest bid, can be viewed on the product card by clicking "View all bids" — stay active to grab the product.</li>
     </ol>
     <div class="tc-contact">
@@ -583,7 +583,7 @@ function render() {
           ? `<button class="bid-btn disabled" disabled>${p.soldOut ? 'Sold Out' : 'Auction Ended'}</button>`
           : `<button class="bid-btn" onclick="openModal(${realIdx})">Place Your Bid →</button>`}
         <a href="${p.productUrl || '#'}" target="_blank" class="view-btn">View Product</a>
-        <button onclick="openBidsModal(${realIdx})" style="display:block;width:100%;margin-top:6px;padding:8px;text-align:center;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#999;background:none;border:none;cursor:pointer;font-family:inherit;transition:color 0.2s" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#999'">View all bids ↓</button>
+        <button onclick="openBidsModal(${realIdx})" class="view-btn" style="background:none;cursor:pointer;margin-top:6px">View All Bids</button>
       </div>
     </div>`;
   }).join('');
