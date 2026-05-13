@@ -69,7 +69,9 @@ body{font-family:inherit;background:var(--site-bg);color:var(--site-text);min-he
 @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
 
 /* ── GRID ── */
-.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.25rem}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem}
+@media (min-width:600px){.products-grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem}}
+@media (min-width:900px){.products-grid{grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}}
 .no-results{text-align:center;padding:3rem;color:#999;font-size:15px;grid-column:1/-1}
 
 /* ── CARD ── */
@@ -88,19 +90,26 @@ body{font-family:inherit;background:var(--site-bg);color:var(--site-text);min-he
 .overlay-badge{background:var(--dark);border:1px solid var(--gold);color:var(--gold-light);font-family:inherit;font-size:17px;font-weight:300;letter-spacing:0.18em;text-transform:uppercase;padding:9px 22px;border-radius:2px}
 
 /* CARD BODY */
-.card-body{padding:1.1rem 1.25rem 1.25rem}
-.card-name{font-family:inherit;font-size:16px;color:var(--site-text);line-height:1.35;margin-bottom:0.85rem;min-height:2.7em}
+.card-body{padding:0.85rem 0.9rem 1rem}
+@media (min-width:600px){.card-body{padding:1.1rem 1.25rem 1.25rem}}
+.card-name{font-family:inherit;font-size:13px;color:var(--site-text);line-height:1.35;margin-bottom:0.7rem;min-height:2.7em}
+@media (min-width:600px){.card-name{font-size:16px;margin-bottom:0.85rem}}
 .card-name-link{text-decoration:none}
 .card-name-link:hover .card-name{color:var(--gold)}
-.bid-section{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--site-border)}
-.bid-label{font-size:10px;text-transform:uppercase;letter-spacing:0.12em;color:#999;margin-bottom:3px}
-.bid-amount{font-family:inherit;font-size:22px;font-weight:600;color:var(--site-text);line-height:1}
+.bid-section{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:0.8rem;padding-bottom:0.8rem;border-bottom:1px solid var(--site-border);gap:8px}
+@media (min-width:600px){.bid-section{margin-bottom:1rem;padding-bottom:1rem}}
+.bid-label{font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:#999;margin-bottom:3px}
+@media (min-width:600px){.bid-label{font-size:10px;letter-spacing:0.12em}}
+.bid-amount{font-family:inherit;font-size:17px;font-weight:600;color:var(--site-text);line-height:1}
+@media (min-width:600px){.bid-amount{font-size:22px}}
 
 /* BUTTONS */
-.bid-btn{display:block;width:100%;padding:11px;background:var(--site-text);color:var(--white);border:none;font-family:inherit;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;text-align:center;border-radius:3px;transition:background 0.2s;margin-bottom:8px}
+.bid-btn{display:block;width:100%;padding:10px 4px;background:var(--site-text);color:var(--white);border:none;font-family:inherit;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;text-align:center;border-radius:3px;transition:background 0.2s;margin-bottom:6px}
+@media (min-width:600px){.bid-btn{padding:11px;font-size:11px;letter-spacing:0.15em;margin-bottom:8px}}
 .bid-btn:hover{background:#333}
 .bid-btn.disabled{background:#d0d0d0;color:#999;cursor:not-allowed}
-.view-btn{display:block;width:100%;padding:10px;text-align:center;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#666;border:1px solid var(--site-border);border-radius:3px;text-decoration:none;font-family:inherit;transition:all 0.2s}
+.view-btn{display:block;width:100%;padding:9px 4px;text-align:center;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#666;border:1px solid var(--site-border);border-radius:3px;text-decoration:none;font-family:inherit;transition:all 0.2s}
+@media (min-width:600px){.view-btn{padding:10px;font-size:11px;letter-spacing:0.12em}}
 .view-btn:hover{border-color:var(--site-text);color:var(--site-text)}
 
 /* ── PAGINATION ── */
