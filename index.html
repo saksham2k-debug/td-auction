@@ -576,7 +576,7 @@ function render() {
       <div class="card-img-wrap" onclick="window.open('${p.productUrl}','_blank')">
         ${imgHtml}
         <div class="card-overlay"><div class="overlay-badge">${overlayText}</div></div>
-        ${timerText ? `<div class="${timerClass}" id="timer-${realIdx}">${timerText}</div>` : ''}
+        ${p.soldOut ? '' : (timerText ? `<div class="${timerClass}" id="timer-${realIdx}">${timerText}</div>` : '')}
       </div>
       <div class="card-body">
         ${p.productUrl
@@ -628,6 +628,8 @@ setInterval(() => {
   products.forEach((p, i) => {
     const el = document.getElementById('timer-' + i);
     if (!el) return;
+    // Skip timer updates for sold-out products
+    if (p.soldOut) { el.style.display = 'none'; return; }
     const ended = isEnded(p);
     const tLeft = timeLeftFor(p);
     if (ended) {
