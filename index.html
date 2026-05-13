@@ -55,6 +55,22 @@ body{font-family:inherit;background:var(--site-bg);color:var(--site-text);min-he
 .rules-strip{background:var(--gold-pale);border-bottom:1px solid rgba(184,150,62,0.25);padding:14px 2rem;text-align:center}
 .rules-text{font-size:12.5px;color:var(--charcoal);max-width:880px;margin:0 auto;line-height:1.65;letter-spacing:0.01em}
 
+
+/* ── CATEGORY TABS ── */
+.category-tabs{display:flex;gap:0.5rem;margin-bottom:2rem;overflow-x:auto;padding-bottom:6px;border-bottom:1px solid var(--site-border);-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.category-tabs::-webkit-scrollbar{display:none}
+.cat-tab{padding:9px 18px;border:1px solid var(--site-border);background:var(--white);color:#666;font-family:inherit;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:3px;white-space:nowrap;transition:all 0.2s;flex-shrink:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.cat-tab:hover{border-color:var(--site-text);color:var(--site-text)}
+.cat-tab.active{background:var(--site-text);color:var(--white);border-color:var(--site-text)}
+.cat-tab-count{margin-left:6px;font-size:10px;opacity:0.7;font-weight:400}
+
+/* ── CATEGORY SECTIONS ── */
+.cat-section{margin-bottom:3rem}
+.cat-section:last-child{margin-bottom:0}
+.cat-section-title{font-family:inherit;font-size:14px;letter-spacing:0.22em;text-transform:uppercase;color:#666;margin-bottom:1.5rem;display:flex;align-items:center;gap:14px;scroll-margin-top:80px}
+.cat-section-title::after{content:'';flex:1;height:1px;background:var(--site-border)}
+.cat-section-title-text{font-weight:500;color:var(--site-text)}
+
 /* ── PRODUCTS SECTION ── */
 .products-section{max-width:1280px;margin:0 auto;padding:1.5rem 1rem 1.5rem}
 @media (min-width:600px){.products-section{padding:3rem 1.5rem 2rem}}
@@ -266,12 +282,14 @@ body{font-family:inherit;background:var(--site-bg);color:var(--site-text);min-he
 
 <!-- PRODUCTS -->
 <div class="products-section">
-  <div class="section-label">Live lots</div>
-  <div class="products-grid" id="grid">
-    <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-line shorter"></div></div></div>
-    <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-line shorter"></div></div></div>
-    <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-line shorter"></div></div></div>
-    <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-line shorter"></div></div></div>
+  <div class="category-tabs" id="category-tabs"></div>
+  <div id="grid">
+    <div class="products-grid">
+      <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-line shorter"></div></div></div>
+      <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-line shorter"></div></div></div>
+      <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-line shorter"></div></div></div>
+      <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-line shorter"></div></div></div>
+    </div>
   </div>
   <div class="pagination" id="pagination" style="display:none">
     <button class="page-btn" id="prev-btn" onclick="changePage(-1)">← Prev</button>
@@ -485,6 +503,8 @@ async function fetchProducts() {
         mrp:          parseFloat((cols[2]||'0').replace(/,/g,'')) || 0,
         image:        cols[3] || '',
         productUrl:   cols[4] || '',
+        category:     (cols[9] || 'Other').trim(),
+        catOrder:     parseFloat(cols[10]) || 999,
         endTime, soldOut, auctionEnded,
       });
     });
@@ -564,73 +584,111 @@ function updateHeaderState() {
 }
 
 // ── RENDER ──
+let activeTab = 'all'; // 'all' or a specific category name
+
+function getCategoryGroups() {
+  // Group products by category, preserving catOrder
+  const groups = {};
+  products.forEach(p => {
+    const cat = p.category || 'Other';
+    if (!groups[cat]) groups[cat] = { name: cat, order: p.catOrder, items: [] };
+    groups[cat].items.push(p);
+  });
+  // Sort categories by their catOrder
+  return Object.values(groups).sort((a, b) => a.order - b.order);
+}
+
+function renderCardHTML(p) {
+  const realIdx  = products.indexOf(p);
+  const ended    = isEnded(p);
+  const disabled = p.soldOut || ended;
+  const tLeft    = timeLeftFor(p);
+  const bid      = highestBids[p.formProduct] || p.startingBid;
+  const cardClass = p.soldOut ? 'sold-out' : (ended ? 'auction-ended' : '');
+  const overlayText = p.soldOut ? 'Sold Out' : 'Auction Ended';
+  const timerClass = (tLeft === 'ENDED' || ended) ? 'timer-badge ended-timer' : 'timer-badge';
+  const timerText  = (tLeft === 'ENDED' || ended) ? 'Ended' : (tLeft ? tLeft : '');
+  const imgHtml = p.image
+    ? `<img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+       <div class="img-placeholder" style="display:none">◆</div>`
+    : `<div class="img-placeholder">◆</div>`;
+  return `
+  <div class="card ${cardClass}" id="card-${realIdx}">
+    <div class="card-img-wrap" onclick="window.open('${p.productUrl}','_blank')">
+      ${imgHtml}
+      <div class="card-overlay"><div class="overlay-badge">${overlayText}</div></div>
+      ${p.soldOut ? '' : (timerText ? `<div class="${timerClass}" id="timer-${realIdx}">${timerText}</div>` : '')}
+    </div>
+    <div class="card-body">
+      ${p.productUrl
+        ? `<a href="${p.productUrl}" target="_blank" class="card-name-link"><p class="card-name">${p.name}</p></a>`
+        : `<p class="card-name">${p.name}</p>`}
+      <div class="bid-section">
+        <div>
+          <div class="bid-label">Highest bid</div>
+          <div class="bid-amount" id="bid-${realIdx}">${INR(bid)}</div>
+        </div>
+        <div style="text-align:right">
+          <div class="bid-label">MRP</div>
+          <div class="bid-amount">${INR(p.mrp || p.startingBid)}</div>
+        </div>
+      </div>
+      <div class="card-actions">
+        ${disabled
+          ? `<button class="bid-btn disabled" disabled>${p.soldOut ? 'Sold Out' : 'Auction Ended'}</button>`
+          : `<button class="bid-btn" onclick="openModal(${realIdx})">Place Your Bid →</button>`}
+        <a href="${p.productUrl || '#'}" target="_blank" class="view-btn">View Product</a>
+        <button onclick="openBidsModal(${realIdx})" class="view-btn" style="background:none;cursor:pointer;margin-top:6px">View All Bids</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderTabs(groups) {
+  const tabsEl = document.getElementById('category-tabs');
+  if (!tabsEl) return;
+  if (groups.length <= 1) { tabsEl.style.display = 'none'; return; }
+  tabsEl.style.display = 'flex';
+
+  const tabs = [
+    `<button class="cat-tab ${activeTab === 'all' ? 'active' : ''}" onclick="setActiveTab('all')">All <span class="cat-tab-count">${products.length}</span></button>`,
+    ...groups.map(g => `<button class="cat-tab ${activeTab === g.name ? 'active' : ''}" onclick="setActiveTab('${g.name.replace(/'/g, "\\'")}')">${g.name} <span class="cat-tab-count">${g.items.length}</span></button>`)
+  ];
+  tabsEl.innerHTML = tabs.join('');
+}
+
+function setActiveTab(tab) {
+  activeTab = tab;
+  render();
+  // Scroll grid into view on tab change
+  setTimeout(() => {
+    const grid = document.getElementById('grid');
+    if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 50);
+}
+
 function render() {
   const grid = document.getElementById('grid');
-  const totalPages = Math.ceil(filteredProducts.length / PAGE_SIZE);
-  const start = (currentPage - 1) * PAGE_SIZE;
-  const pageItems = filteredProducts.slice(start, start + PAGE_SIZE);
+  if (!products.length) return;
 
-  if (filteredProducts.length === 0 && products.length > 0) {
-    grid.innerHTML = '<div class="no-results">No products available</div>';
-    document.getElementById('pagination').style.display = 'none';
+  const groups = getCategoryGroups();
+  renderTabs(groups);
+
+  // Filter groups by active tab
+  const visibleGroups = activeTab === 'all' ? groups : groups.filter(g => g.name === activeTab);
+
+  if (visibleGroups.length === 0) {
+    grid.innerHTML = '<div class="no-results">No products in this category</div>';
     return;
   }
 
-  grid.innerHTML = pageItems.map(p => {
-    const realIdx  = products.indexOf(p);
-    const ended    = isEnded(p);
-    const disabled = p.soldOut || ended;
-    const tLeft    = timeLeftFor(p);
-    const bid      = highestBids[p.formProduct] || p.startingBid;
-    const cardClass = p.soldOut ? 'sold-out' : (ended ? 'auction-ended' : '');
-    const overlayText = p.soldOut ? 'Sold Out' : 'Auction Ended';
-    const timerClass = (tLeft === 'ENDED' || ended) ? 'timer-badge ended-timer' : 'timer-badge';
-    const timerText  = (tLeft === 'ENDED' || ended) ? 'Ended' : (tLeft ? tLeft : '');
-    const imgHtml = p.image
-      ? `<img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-         <div class="img-placeholder" style="display:none">◆</div>`
-      : `<div class="img-placeholder">◆</div>`;
-    return `
-    <div class="card ${cardClass}" id="card-${realIdx}">
-      <div class="card-img-wrap" onclick="window.open('${p.productUrl}','_blank')">
-        ${imgHtml}
-        <div class="card-overlay"><div class="overlay-badge">${overlayText}</div></div>
-        ${p.soldOut ? '' : (timerText ? `<div class="${timerClass}" id="timer-${realIdx}">${timerText}</div>` : '')}
-      </div>
-      <div class="card-body">
-        ${p.productUrl
-          ? `<a href="${p.productUrl}" target="_blank" class="card-name-link"><p class="card-name">${p.name}</p></a>`
-          : `<p class="card-name">${p.name}</p>`}
-        <div class="bid-section">
-          <div>
-            <div class="bid-label">Highest bid</div>
-            <div class="bid-amount" id="bid-${realIdx}">${INR(bid)}</div>
-          </div>
-          <div style="text-align:right">
-            <div class="bid-label">MRP</div>
-            <div class="bid-amount">${INR(p.mrp || p.startingBid)}</div>
-          </div>
-        </div>
-        <div class="card-actions">
-          ${disabled
-            ? `<button class="bid-btn disabled" disabled>${p.soldOut ? 'Sold Out' : 'Auction Ended'}</button>`
-            : `<button class="bid-btn" onclick="openModal(${realIdx})">Place Your Bid →</button>`}
-          <a href="${p.productUrl || '#'}" target="_blank" class="view-btn">View Product</a>
-          <button onclick="openBidsModal(${realIdx})" class="view-btn" style="background:none;cursor:pointer;margin-top:6px">View All Bids</button>
-        </div>
-      </div>
-    </div>`;
-  }).join('');
+  // Render all products in one continuous grid, grouped by category order
+  const allItems = visibleGroups.flatMap(g => g.items);
+  grid.innerHTML = `<div class="products-grid">${allItems.map(p => renderCardHTML(p)).join('')}</div>`;
 
-  const pagEl = document.getElementById('pagination');
-  if (totalPages > 1) {
-    pagEl.style.display = 'flex';
-    document.getElementById('page-info').textContent = `Page ${currentPage} of ${totalPages}`;
-    document.getElementById('prev-btn').disabled = currentPage === 1;
-    document.getElementById('next-btn').disabled = currentPage === totalPages;
-  } else {
-    pagEl.style.display = 'none';
-  }
+  // Hide pagination — categories handle the layout now
+  document.getElementById('pagination').style.display = 'none';
+
   updateHeaderState();
   updateAdminStatus();
 }
