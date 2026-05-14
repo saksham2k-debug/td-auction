@@ -427,7 +427,7 @@ body .field label{
         <button class="btn-submit" onclick="submitNotify()" style="width:100%;margin-top:0.5rem">Notify Me →</button>
       </div>
     </div>
-    <div class="notify-success" id="notify-success">
+    <div class="notify-success" id="notify-success" data-event="notify-submitted">
       <div class="notify-success-icon">✓</div>
       <div class="notify-success-title">You're on the list!</div>
       <p class="notify-success-sub">Thanks, we'll WhatsApp you before the auction starts.</p>
@@ -469,7 +469,7 @@ body .field label{
         </div>
       </div>
     </div>
-    <div class="success-view" id="success-view">
+    <div class="success-view" id="success-view" data-event="bid-submitted">
       <div class="success-icon">✓</div>
       <div class="success-title">Bid Submitted!</div>
       <p class="success-sub">Your bid is recorded.</p>
@@ -924,6 +924,15 @@ function submitBid() {
   highestBids[active.product.formProduct] = amount;
   const bEl = document.getElementById('bid-' + active.index);
   if (bEl) bEl.textContent = INR(amount);
+  // Conversion event — clean signal for Meta Pixel / GA / GTM to capture
+  if (typeof window.fbq === 'function') {
+    try { window.fbq('track', 'Lead', { content_name: active.product.name || 'Bid', value: amount, currency: 'INR' }); } catch(e){}
+  }
+  if (typeof window.dataLayer !== 'undefined' && window.dataLayer.push) {
+    try { window.dataLayer.push({ event:'auction_bid_submitted', product: active.product.name, bid_amount: amount, currency: 'INR' }); } catch(e){}
+  }
+  // Fire a DOM custom event for any tag manager listening
+  document.dispatchEvent(new CustomEvent('td_bid_submitted', { detail: { product: active.product.name, amount: amount } }));
   document.getElementById('form-view').style.display    = 'none';
   document.getElementById('success-view').style.display = 'block';
 }
@@ -1018,6 +1027,14 @@ function submitNotify() {
   } else {
     console.log('Notify form not configured. Lead:', { name, phone });
   }
+  // Conversion event — clean signal for Meta Pixel / GA / GTM to capture
+  if (typeof window.fbq === 'function') {
+    try { window.fbq('track', 'Lead', { content_name: 'Auction Notify Signup', currency: 'INR' }); } catch(e){}
+  }
+  if (typeof window.dataLayer !== 'undefined' && window.dataLayer.push) {
+    try { window.dataLayer.push({ event:'auction_notify_submitted' }); } catch(e){}
+  }
+  document.dispatchEvent(new CustomEvent('td_notify_submitted', { detail: {} }));
 
   // Show success view + auto-close after 8 seconds (no visible ticker)
   document.getElementById('notify-form-view').style.display = 'none';
