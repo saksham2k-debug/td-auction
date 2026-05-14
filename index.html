@@ -322,7 +322,7 @@ body .field label{
 <!-- HERO -->
 <div class="hero">
   <p class="hero-eyebrow">True Diamond E-Auction</p>
-  <div class="live-pill" id="live-pill"><span class="live-dot" id="live-dot"></span><span id="live-pill-text">Live Auction</span></div>
+  <div class="live-pill" id="live-pill" style="visibility:hidden"><span class="live-dot" id="live-dot"></span><span id="live-pill-text">Loading…</span></div>
   <h1>India's Most Exclusive<br><em>Jewellery Auction</em></h1>
   <p class="hero-sub">Exclusive pieces for a steal. Place your bid, win the jewellery.</p>
   <p class="hero-tc">T&Cs apply</p>
@@ -615,18 +615,23 @@ async function fetchProducts() {
       });
 
       // Read auction start time from column M (index 12) — same value for all rows, first non-empty wins
-      const rawStart = (cols[12] || '').trim();
-      if (rawStart && !auctionStartTime) {
-        const parts = rawStart.split(' ');
-        if (parts.length >= 2) {
-          let datePart = parts[0], timePart = parts[1].substring(0,5);
-          if (datePart.includes('/')) {
-            const [m,d,y] = datePart.split('/');
-            datePart = y + '-' + String(m).padStart(2,'0') + '-' + String(d).padStart(2,'0');
+      try {
+        const rawStart = (cols[12] || '').trim();
+        if (rawStart && !auctionStartTime) {
+          const parts = rawStart.split(' ');
+          if (parts.length >= 2) {
+            let datePart = parts[0], timePart = parts[1].substring(0,5);
+            if (datePart.includes('/')) {
+              const [m,d,y] = datePart.split('/');
+              datePart = y + '-' + String(m).padStart(2,'0') + '-' + String(d).padStart(2,'0');
+            }
+            if (datePart && timePart) {
+              const d = new Date(datePart + 'T' + timePart + ':00+05:30');
+              if (!isNaN(d.getTime())) auctionStartTime = d;
+            }
           }
-          if (datePart && timePart) auctionStartTime = new Date(datePart + 'T' + timePart + ':00+05:30');
         }
-      }
+      } catch(e) { console.warn('Could not parse auction start time:', e.message); }
     });
     if (loaded.length > 0) {
       products = loaded;
@@ -705,6 +710,8 @@ function updateGlobalTimer() {
 
 let _wasPreLaunch = null;
 function updateHeaderState() {
+  const pill = document.getElementById('live-pill');
+  if (pill) pill.style.visibility = 'visible'; // reveal pill once we know state
   // Pre-launch state takes priority
   const nowPreLaunch = isPreLaunch();
   if (_wasPreLaunch !== null && _wasPreLaunch !== nowPreLaunch) {
@@ -719,7 +726,6 @@ function updateHeaderState() {
   }
 
   const allEnded = products.length > 0 && products.every(p => isEnded(p) || p.soldOut);
-  const pill = document.getElementById('live-pill');
   const pillText = document.getElementById('live-pill-text');
   const banner = document.getElementById('ended-banner');
   const fab = document.getElementById('notify-fab');
@@ -756,7 +762,8 @@ function renderCardHTML(p) {
   const ended    = isEnded(p);
   const disabled = p.soldOut || ended;
   const tLeft    = timeLeftFor(p);
-  const bid      = highestBids[p.formProduct] || p.startingBid;
+  const bid      = getEffectiveHighest(p);
+  const bidLabel = isPreLaunch() ? 'Starting Bid' : 'Highest bid';
   const cardClass = p.soldOut ? 'sold-out' : (ended ? 'auction-ended' : '');
   const overlayText = p.soldOut ? 'Sold Out' : 'Auction Ended';
   const timerClass = (tLeft === 'ENDED' || ended) ? 'timer-badge ended-timer' : 'timer-badge';
@@ -971,6 +978,7 @@ function updatePreLaunchUI() {
   const pill = document.getElementById('live-pill');
   const pillText = document.getElementById('live-pill-text');
   const fab = document.getElementById('notify-fab');
+  if (pill) pill.style.visibility = 'visible'; // ensure visible
 
   if (isPreLaunch()) {
     pill.classList.add('pre-launch');
