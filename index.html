@@ -655,7 +655,7 @@ async function fetchBids() {
     });
     products.forEach((p, i) => {
       const bEl = document.getElementById('bid-' + i);
-      if (bEl && highestBids[p.formProduct]) bEl.textContent = INR(highestBids[p.formProduct]);
+      if (bEl) bEl.textContent = INR(getEffectiveHighest(p));
     });
     updateAdminStatus();
   } catch(e) { console.log('Bids fetch error:', e.message); }
@@ -703,9 +703,16 @@ function updateGlobalTimer() {
   timerEl.textContent = String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
 }
 
+let _wasPreLaunch = null;
 function updateHeaderState() {
   // Pre-launch state takes priority
-  if (isPreLaunch()) {
+  const nowPreLaunch = isPreLaunch();
+  if (_wasPreLaunch !== null && _wasPreLaunch !== nowPreLaunch) {
+    // State transitioned (pre-launch ↔ live) — re-render cards to update labels & fakes
+    if (typeof render === 'function') render();
+  }
+  _wasPreLaunch = nowPreLaunch;
+  if (nowPreLaunch) {
     updatePreLaunchUI();
     document.getElementById('ended-banner').classList.remove('show');
     return;
@@ -771,7 +778,7 @@ function renderCardHTML(p) {
         : `<p class="card-name">${p.name}</p>`}
       <div class="bid-section">
         <div>
-          <div class="bid-label">Highest bid</div>
+          <div class="bid-label">${bidLabel}</div>
           <div class="bid-amount" id="bid-${realIdx}">${INR(bid)}</div>
         </div>
         <div style="text-align:right">
@@ -883,7 +890,7 @@ function openModal(i) {
   const p = products[i];
   if (!p || isEnded(p) || p.soldOut || isPreLaunch()) return;
   active = { index: i, product: p };
-  const h = highestBids[p.formProduct] || p.startingBid;
+  const h = getEffectiveHighest(p);
   document.getElementById('modal-lot').textContent  = p.lot;
   document.getElementById('modal-name').textContent = p.name;
   document.getElementById('modal-bid').textContent  = INR(h);
@@ -910,7 +917,7 @@ function submitBid() {
   const phone  = document.getElementById('f-phone').value.trim();
   const amount = parseInt(document.getElementById('f-bid').value);
   const errEl  = document.getElementById('f-error');
-  const h      = highestBids[active.product.formProduct] || active.product.startingBid;
+  const h      = getEffectiveHighest(active.product);
   errEl.style.display = 'none';
   if (!name)                { errEl.textContent='Please enter your name.';              errEl.style.display='block'; return; }
   if (phone.length < 10)    { errEl.textContent='Please enter a valid phone number.';  errEl.style.display='block'; return; }
@@ -1048,6 +1055,44 @@ document.getElementById('notify-overlay').addEventListener('click', e => {
   if (e.target.id === 'notify-overlay') closeNotifyModal();
 });
 
+
+// ── FAKE BIDS (consistency-driven social proof) ──
+// Same product always gets the same fake bids for everyone.
+// Pre-launch: no fakes shown. Live: fakes appear.
+function _hashStr(s) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) { h = ((h << 5) - h + s.charCodeAt(i)) | 0; }
+  return Math.abs(h);
+}
+function getFakeBidsFor(p) {
+  if (!p || !p.formProduct) return [];
+  // Don't show fakes during pre-launch
+  if (typeof isPreLaunch === 'function' && isPreLaunch()) return [];
+  const h = _hashStr(p.formProduct);
+  // ~33% of products get 2 fake bids, ~67% get 1 fake bid
+  const count = (h % 3 === 0) ? 2 : 1;
+  const base = p.startingBid;
+  const bids = [];
+  // Synthesize realistic timestamps so the list looks natural — within last 6h
+  const now = Date.now();
+  for (let k = 1; k <= count; k++) {
+    bids.push({
+      amount: base + (k * 1000),
+      time: new Date(now - (count - k + 1) * (60 + (h % 90)) * 60 * 1000).toISOString(),
+      _fake: true
+    });
+  }
+  return bids; // ascending order
+}
+function getEffectiveHighest(p) {
+  const real = highestBids[p.formProduct];
+  const fakes = getFakeBidsFor(p);
+  const fakeMax = fakes.length ? fakes[fakes.length - 1].amount : 0;
+  // If real bid exists and beats fake → real wins; else fake floor
+  if (real && real > 0) return Math.max(real, fakeMax, p.startingBid);
+  return Math.max(fakeMax, p.startingBid);
+}
+
 // ── BID HISTORY ──
 let allBidsData = {}; // product -> [{amount, time}]
 
@@ -1080,7 +1125,11 @@ function openBidsModal(i) {
   document.body.style.overflow = 'hidden';
 
   fetchAllBids().then(() => {
-    const bids = (allBidsData[p.formProduct] || []).slice().reverse(); // newest first (sheet stores chronologically)
+    const realBids = (allBidsData[p.formProduct] || []).slice();
+    const fakeBids = getFakeBidsFor(p);
+    // Combine real + fake, sort chronologically descending (newest first)
+    const combined = realBids.concat(fakeBids);
+    const bids = combined.sort((a, b) => new Date(b.time) - new Date(a.time));
     const body = document.getElementById('bids-modal-body');
     if (!bids.length) {
       body.innerHTML = '<div class="bids-empty"><span class="bids-empty-icon">◆</span>No bids placed yet.<br>Be the first to bid!</div>';
@@ -1176,7 +1225,7 @@ function updateAdminStatus() {
   const el = document.getElementById('status-list');
   if (!el || !products.length) return;
   el.innerHTML = products.map(p => {
-    const bid = highestBids[p.formProduct] || p.startingBid;
+    const bid = getEffectiveHighest(p);
     const ended = isEnded(p);
     const tLeft = timeLeftFor(p);
     const tag = p.soldOut ? '<span class="status-tag tag-sold">Sold</span>'
