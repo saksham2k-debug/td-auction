@@ -1,0 +1,2630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mystical Petal 3 Ct Portuguese Solitaire Ring | True Diamond</title>
+<meta name="description" content="Mystical Petal 3 Ct Portuguese cut solitaire — the world's brightest diamond, 161 facets, IGI certified, set in 14K/18K gold. Lifetime buyback. Free India shipping.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Product",
+  "name":"Mystical Petal 3 Ct Portuguese Solitaire Ring",
+  "image":"https://truediamond.in/cdn/shop/files/1_da71f196-1b75-43d9-84f3-ad2b248b2f81.png",
+  "description":"3 carat Portuguese cut lab grown diamond solitaire ring, framed by six marquise diamonds. IGI certified. 14K/18K gold.",
+  "sku":"TD-MP-3CT-PORT-001",
+  "brand":{"@type":"Brand","name":"True Diamond"},
+  "offers":{"@type":"Offer","price":"249826","priceCurrency":"INR","availability":"https://schema.org/InStock","priceValidUntil":"2026-12-31"},
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"137"}
+}
+</script>
+<style>
+/* === Brand tokens — pulled from TD's actual :root + Lucira PDP === */
+:root{
+  --brand-red:#bf1304;        /* TD --accent-color */
+  --brand-red-dark:#740c02;   /* TD --accent-color-darken */
+  --sale-red:#ec0101;         /* TD --primary-price-color */
+  --ink:#222222;              /* TD --text-color / --heading-color */
+  --ink-2:#555555;
+  --ink-3:#878787;            /* TD --link-color / --secondary-price-color */
+  --ink-4:#bfbfbf;
+  --line:#ddd;                /* TD --border-color */
+  --line-2:#e5e5e5;
+  --bg:#ffffff;
+  --bg-soft:#fafafa;
+  --bg-pale:#fef5f1;          /* Lucira's cream section bg */
+  --bg-card:#f9f9f9;          /* Lucira's inactive variant card bg */
+  --success:#428445;          /* TD --t4s-success-color */
+  --success-bright:#109533;   /* TD badge new color (in-stock dot) */
+  --success-pale:#e7f5ef;
+  --warn:#e0b252;             /* TD warning */
+  --warn-pale:#fef3c7;
+  --sale-pale:#eda19a;        /* TD sale badge pink */
+  --radius:0;
+  --radius-pill:999px;
+  --radius-sm:2px;            /* Lucira's rounded-sm on CTA */
+  --radius-md:8px;            /* Lucira's rounded-md on size chips */
+  --radius-lg:12px;           /* Lucira's rounded-lg on karat cards */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Poppins', -apple-system, system-ui, sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.6;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--ink);text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.container{max-width:1280px;margin:0 auto;padding:0 16px}
+@media(min-width:768px){.container{padding:0 24px}}
+
+/* === Promo bar === */
+.promo{
+  background:var(--ink);
+  color:#fff;
+  padding:8px 12px;
+  text-align:center;
+  font-size:11px;
+  letter-spacing:0.04em;
+  font-weight:400;
+  overflow:hidden;
+  height:32px;
+  position:relative;
+}
+.promo-track{display:flex;animation:slide 30s linear infinite;gap:32px;white-space:nowrap;align-items:center;height:100%}
+.promo-track span{color:#fff;font-weight:500}
+.promo-track span b{color:#fff;font-weight:600}
+.promo-track span::before{content:"•";color:var(--brand-red);margin-right:14px;font-weight:bold}
+@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* === Header === */
+.header{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:60px;
+}
+.logo{font-weight:600;font-size:18px;letter-spacing:0.04em;color:var(--ink)}
+.logo b{color:var(--brand-red);font-weight:700}
+.nav{display:none;gap:28px;font-size:13px;letter-spacing:0.02em;font-weight:500}
+.nav a{color:var(--ink);transition:color 0.2s}
+.nav a:hover{color:var(--brand-red)}
+.header-actions{display:flex;gap:6px;align-items:center}
+.icon-btn{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;font-size:18px;color:var(--ink);transition:color 0.2s}
+.icon-btn:hover{color:var(--brand-red)}
+.cart-count{font-size:11px;color:var(--ink-3);margin-left:2px}
+.hamburger{display:flex;width:38px;height:38px;align-items:center;justify-content:center;font-size:20px}
+@media(min-width:980px){
+  .header-inner{height:74px}
+  .logo{font-size:22px}
+  .nav{display:flex}
+  .hamburger{display:none}
+}
+
+/* === Breadcrumb === */
+.crumb{padding:10px 0 4px;font-size:11px;color:var(--ink-3);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+.crumb a{color:var(--ink-3)}
+.crumb a:hover{color:var(--ink)}
+.crumb .sep{margin:0 6px;color:var(--ink-4)}
+@media(min-width:768px){.crumb{font-size:12px;padding:12px 0 6px}}
+
+/* === PDP layout === */
+.pdp{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:24px;
+  padding:8px 0 100px;
+}
+@media(min-width:980px){
+  .pdp{
+    grid-template-columns:1.15fr 1fr;
+    gap:48px;
+    padding:8px 0 60px;
+  }
+}
+
+/* === Gallery === */
+.gallery-main{
+  aspect-ratio:1;
+  background:var(--bg-soft);
+  overflow:hidden;
+  position:relative;
+}
+.gallery-main img{width:100%;height:100%;object-fit:cover}
+.gallery-badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:var(--brand-red);
+  color:#fff;
+  font-size:10px;
+  letter-spacing:0.08em;
+  font-weight:600;
+  padding:5px 10px;
+  text-transform:uppercase;
+  border-radius:var(--radius-pill);
+}
+.gallery-thumbs{
+  display:flex;
+  gap:6px;
+  margin-top:8px;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  padding-bottom:4px;
+}
+@media(min-width:768px){
+  .gallery-thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;overflow:visible}
+}
+.thumb{
+  flex:0 0 64px;
+  aspect-ratio:1;
+  background:var(--bg-soft);
+  border:1.5px solid transparent;
+  cursor:pointer;
+  position:relative;
+  transition:border-color 0.2s;
+  overflow:hidden;
+}
+@media(min-width:768px){.thumb{flex:0 0 auto}}
+.thumb.active{border-color:var(--brand-red)}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb.video::after{content:"▶";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;background:rgba(0,0,0,0.35)}
+@media(min-width:980px){
+  .gallery{position:sticky;top:90px;height:fit-content;align-self:start}
+}
+
+/* === Product info === */
+.product-tag{
+  font-size:10px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--brand-red);
+  font-weight:600;
+  margin-bottom:6px;
+}
+.info h1{
+  font-family:'Poppins',sans-serif;
+  font-size:22px;
+  line-height:1.25;
+  font-weight:500;
+  margin-bottom:10px;
+  color:var(--ink);
+  letter-spacing:-0.01em;
+}
+@media(min-width:768px){.info h1{font-size:28px}}
+
+.subhead{
+  font-size:12px;
+  color:var(--ink-3);
+  margin-bottom:14px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+}
+.subhead .stars{color:#f5a623;font-size:13px;letter-spacing:0.05em}
+.subhead .stars-num{color:var(--ink);font-weight:600}
+.subhead .pipe{color:var(--line)}
+.subhead a{color:var(--ink-3);border-bottom:1px solid var(--line)}
+
+.spec-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  font-size:10.5px;
+  letter-spacing:0.04em;
+  background:var(--bg-pale);
+  color:var(--brand-red);
+  padding:5px 10px;
+  border-radius:var(--radius-pill);
+  font-weight:600;
+  text-transform:uppercase;
+}
+
+/* === Live viewers === */
+.live-viewers{
+  background:var(--bg-soft);
+  padding:9px 12px;
+  margin-bottom:18px;
+  font-size:12px;
+  color:var(--ink-2);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border-left:3px solid var(--brand-red);
+}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--brand-red);animation:pulse 2s ease-in-out infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+
+/* === Price block === */
+.price-block{
+  padding:18px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  margin-bottom:20px;
+}
+.price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:6px;flex-wrap:wrap}
+.price-now{font-size:26px;font-weight:600;letter-spacing:-0.01em;color:var(--sale-red)}
+@media(min-width:768px){.price-now{font-size:30px}}
+.price-was{font-size:14px;color:var(--ink-3);text-decoration:line-through}
+.price-save-tag{
+  font-size:11px;
+  font-weight:600;
+  background:var(--success-bright);
+  color:#fff;
+  padding:3px 9px;
+  border-radius:var(--radius-pill);
+  letter-spacing:0.02em;
+  display:inline-flex;
+  align-items:center;
+  gap:3px;
+}
+.price-save-tag::before{content:"↓";font-weight:700}
+.price-savings{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;font-size:12px;color:var(--success);font-weight:500}
+.price-savings span::before{content:"✓ ";font-weight:bold}
+.price-note{font-size:11px;color:var(--ink-3);margin-top:6px}
+
+/* === Variants === */
+.variant{margin-bottom:18px}
+.variant-label{
+  font-size:12px;
+  color:var(--ink-2);
+  font-weight:500;
+  margin-bottom:8px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+}
+.variant-label .selected{color:var(--ink);font-weight:600}
+.variant-label .help{
+  color:var(--brand-red);
+  font-size:11px;
+  font-weight:500;
+  border-bottom:1px solid var(--brand-red);
+}
+/* === Metal/karat cards — Lucira exact: gradient swatch + 2-line label + green active dot === */
+.metal-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+@media(min-width:480px){.metal-grid{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:768px){.metal-grid{grid-template-columns:repeat(3,1fr)}}
+.opt-metal{
+  border:1px solid var(--line);
+  background:var(--bg-card);
+  padding:12px 8px;
+  cursor:pointer;
+  transition:all 0.18s;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  border-radius:var(--radius-lg);
+  font-family:inherit;
+  position:relative;
+  min-height:88px;
+}
+.opt-metal:hover{border-color:var(--ink-3)}
+.opt-metal.active{
+  border-color:var(--brand-red);
+  background:#fff;
+  box-shadow:0 0 0 1px var(--brand-red), 0 1px 3px rgba(0,0,0,0.04);
+}
+.opt-metal.active::before{
+  content:"";
+  position:absolute;
+  top:8px;
+  left:8px;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--success-bright);
+}
+
+/* Gold gradient swatches — 28x28 circles */
+.metal-swatch{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  border:1px solid rgba(0,0,0,0.06);
+  box-shadow:inset 0 0 4px rgba(0,0,0,0.08);
+  flex-shrink:0;
+}
+.metal-swatch.yellow{background:linear-gradient(147.45deg, #c59922 17.98%, #ead59e 48.14%, #c59922 83.84%)}
+.metal-swatch.rose{background:linear-gradient(147.45deg, #c98675 17.98%, #f5cab8 48.14%, #c98675 83.84%)}
+.metal-swatch.white{background:linear-gradient(147.45deg, #c4c4c4 17.98%, #ededed 48.14%, #c4c4c4 83.84%)}
+
+.opt-metal .karat{
+  font-size:13px;
+  font-weight:500;
+  color:var(--ink);
+  letter-spacing:0;
+  line-height:1.15;
+  text-transform:uppercase;
+}
+.opt-metal .metal-label{
+  font-size:10.5px;
+  font-weight:400;
+  color:var(--ink-2);
+  letter-spacing:0.02em;
+  line-height:1.15;
+  text-transform:uppercase;
+}
+.opt-metal .stack{display:flex;flex-direction:column;gap:2px;align-items:center}
+.opt-metal.active .karat{font-weight:600}
+
+/* === Size chips — Lucira exact: 40px, 8px rounded, green dot when active === */
+.size-grid{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:8px;
+}
+@media(min-width:480px){.size-grid{grid-template-columns:repeat(7,1fr)}}
+.opt-size{
+  border:1px solid var(--line);
+  background:#fff;
+  cursor:pointer;
+  transition:all 0.18s;
+  min-height:40px;
+  height:40px;
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  font-weight:400;
+  color:var(--ink);
+  border-radius:var(--radius-md);
+  font-family:inherit;
+  padding:0 2px;
+  position:relative;
+}
+.opt-size:hover{border-color:var(--ink-3)}
+.opt-size.active{
+  border-color:var(--brand-red);
+  background:#fff;
+  box-shadow:0 0 0 1px var(--brand-red);
+  color:var(--ink);
+  font-weight:700;
+}
+.opt-size.active::before{
+  content:"";
+  position:absolute;
+  top:4px;
+  left:4px;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--success-bright);
+}
+.opt-size.unavailable{
+  color:var(--ink-4);
+  background:var(--bg-soft);
+  cursor:not-allowed;
+  position:relative;
+}
+.opt-size.unavailable::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top right, transparent calc(50% - 0.5px), var(--ink-4) 50%, transparent calc(50% + 0.5px));
+}
+
+/* Section heading in PDP right column (mimics Lucira's SIZE & CUSTOMIZATION) */
+.pdp-section-head{
+  font-size:11px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  font-weight:700;
+  color:var(--ink);
+  padding:18px 0 12px;
+  margin-top:6px;
+  border-top:1px solid var(--line);
+}
+
+/* Collapsible info panels (Warranty / Care / Package) */
+.info-accordion{margin-bottom:6px;border:1px solid var(--line);background:#fff}
+.info-accordion-head{
+  padding:14px 16px;
+  font-weight:600;
+  font-size:13px;
+  color:var(--ink);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  min-height:48px;
+}
+.info-accordion-head::after{content:"+";color:var(--brand-red);font-size:20px;font-weight:300;transition:transform 0.2s}
+.info-accordion.open .info-accordion-head::after{content:"−"}
+.info-accordion-body{display:none;padding:0 16px 16px;color:var(--ink-2);font-size:13px;line-height:1.7}
+.info-accordion.open .info-accordion-body{display:block;border-top:1px solid var(--line);padding-top:14px}
+
+/* Same Collection / Recently Viewed — horizontal scroll on mobile */
+.h-scroll{
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:48%;
+  gap:10px;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  padding-bottom:8px;
+  scroll-snap-type:x mandatory;
+}
+.h-scroll > *{scroll-snap-align:start}
+@media(min-width:560px){.h-scroll{grid-auto-columns:32%}}
+@media(min-width:780px){.h-scroll{grid-auto-columns:23%}}
+@media(min-width:980px){.h-scroll{grid-auto-columns:19%}}
+
+/* Explore Our Range tiles */
+.explore-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+}
+@media(min-width:560px){.explore-grid{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:780px){.explore-grid{grid-template-columns:repeat(8,1fr)}}
+.explore-tile{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:16px 8px;
+  text-align:center;
+  cursor:pointer;
+  transition:all 0.2s;
+  border-radius:8px;
+  min-height:84px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+}
+.explore-tile:hover{border-color:var(--brand-red);transform:translateY(-2px)}
+.explore-icon{font-size:22px;color:var(--brand-red)}
+.explore-label{font-size:12px;font-weight:500;color:var(--ink)}
+
+/* Full-width store finder */
+.store-finder{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:18px;
+  border-radius:8px;
+}
+.store-finder-head{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.store-finder-pin{
+  display:flex;
+  gap:6px;
+  background:var(--bg-soft);
+  padding:5px;
+  flex:1;
+  min-width:200px;
+  max-width:340px;
+  border-radius:8px;
+}
+.store-finder-pin input{
+  flex:1;
+  border:none;
+  padding:8px 10px;
+  font-family:inherit;
+  font-size:13px;
+  background:transparent;
+  outline:none;
+  min-height:40px;
+}
+.store-finder-pin button{
+  padding:8px 16px;
+  font-size:11.5px;
+  letter-spacing:0.04em;
+  font-weight:600;
+  background:var(--ink);
+  color:#fff;
+  border-radius:var(--radius-pill);
+  text-transform:uppercase;
+}
+.store-card-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:14px}
+@media(min-width:680px){.store-card-grid{grid-template-columns:1fr 1fr}}
+.store-card{
+  border:1px solid var(--line);
+  padding:16px;
+  border-radius:8px;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.store-card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.store-card-name{font-weight:600;font-size:14px;color:var(--ink);margin-bottom:2px}
+.store-card-status{
+  font-size:9.5px;
+  letter-spacing:0.05em;
+  padding:3px 8px;
+  border-radius:var(--radius-pill);
+  font-weight:600;
+  text-transform:uppercase;
+  flex-shrink:0;
+  white-space:nowrap;
+  height:fit-content;
+}
+.store-card-status.in-stock{background:var(--success-pale);color:var(--success)}
+.store-card-status.ships-from{background:var(--warn-pale);color:var(--warn)}
+.store-card-addr{font-size:11.5px;color:var(--ink-3);line-height:1.5}
+.store-card-meta{font-size:11px;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.store-card-meta b{color:var(--ink);font-weight:600}
+.store-card-actions{display:flex;gap:6px;margin-top:6px}
+.store-card-btn{
+  flex:1;
+  padding:9px;
+  font-size:10.5px;
+  letter-spacing:0.04em;
+  text-align:center;
+  border:1px solid var(--ink);
+  color:var(--ink);
+  font-weight:600;
+  text-transform:uppercase;
+  border-radius:var(--radius-pill);
+  background:#fff;
+  cursor:pointer;
+  min-height:38px;
+}
+.store-card-btn.primary{background:var(--brand-red);color:#fff;border-color:var(--brand-red)}
+.store-card-btn:hover{background:var(--ink);color:#fff}
+.store-card-btn.primary:hover{background:var(--brand-red-dark)}
+
+/* Newsletter signup */
+.newsletter{
+  background:linear-gradient(135deg, var(--bg-pale) 0%, var(--bg-soft) 100%);
+  padding:40px 24px;
+  text-align:center;
+  border-radius:8px;
+}
+.newsletter h2{font-size:22px;margin-bottom:8px}
+.newsletter p{color:var(--ink-2);font-size:13.5px;margin-bottom:20px;max-width:480px;margin-left:auto;margin-right:auto}
+.newsletter-form{
+  display:flex;
+  gap:6px;
+  max-width:420px;
+  margin:0 auto;
+  background:#fff;
+  border:1px solid var(--line-2);
+  padding:5px;
+  border-radius:var(--radius-pill);
+}
+.newsletter-form input{
+  flex:1;
+  border:none;
+  padding:10px 14px;
+  font-family:inherit;
+  font-size:13px;
+  background:transparent;
+  outline:none;
+  min-height:42px;
+}
+.newsletter-form button{
+  padding:10px 22px;
+  font-size:11.5px;
+  letter-spacing:0.06em;
+  font-weight:600;
+  background:var(--brand-red);
+  color:#fff;
+  border-radius:var(--radius-pill);
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.newsletter small{display:block;color:var(--ink-3);font-size:10.5px;margin-top:10px}
+
+.size-helper{font-size:11.5px;color:var(--ink-3);margin-top:8px;line-height:1.6}
+.size-helper a{color:var(--brand-red);border-bottom:1px solid var(--brand-red);font-weight:500}
+
+/* === Engraving === */
+.engrave{
+  background:var(--bg-pale);
+  padding:12px 14px;
+  margin-bottom:18px;
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-size:12.5px;
+  border-left:3px solid var(--brand-red);
+}
+.engrave-icon{font-size:18px;line-height:1;color:var(--brand-red)}
+.engrave-body{flex:1}
+.engrave-body b{display:block;margin-bottom:2px;font-weight:600;color:var(--ink)}
+.engrave-body input{
+  margin-top:8px;
+  width:100%;
+  border:1px solid var(--line-2);
+  background:#fff;
+  padding:9px 12px;
+  font-family:inherit;
+  font-size:13px;
+  min-height:40px;
+}
+.engrave-body input:focus{outline:none;border-color:var(--brand-red)}
+
+/* === Delivery + Pincode === */
+.deliver-bar{
+  background:var(--success-pale);
+  color:var(--success);
+  font-size:12.5px;
+  padding:10px 12px;
+  margin-bottom:12px;
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  line-height:1.45;
+}
+.deliver-bar b{font-weight:600}
+
+.pincode{
+  display:flex;
+  gap:6px;
+  background:#fff;
+  border:1px solid var(--line-2);
+  padding:4px;
+  margin-bottom:18px;
+  align-items:stretch;
+}
+.pincode input{
+  flex:1;
+  border:none;
+  padding:8px 10px;
+  font-family:inherit;
+  font-size:13px;
+  background:transparent;
+  outline:none;
+  min-height:38px;
+}
+.pincode button{
+  padding:8px 18px;
+  font-size:11.5px;
+  letter-spacing:0.04em;
+  font-weight:600;
+  background:var(--ink);
+  color:#fff;
+  border-radius:var(--radius-pill);
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+/* === CTAs — Lucira spec: h-14 (56px), rounded-sm (2px), uppercase, tracking-wider === */
+.cta-stack{display:flex;flex-direction:column;gap:8px;margin-bottom:6px}
+.cta-row{display:grid;grid-template-columns:1fr;gap:8px}
+@media(min-width:520px){.cta-row{grid-template-columns:1.6fr 1fr}}
+.btn{
+  padding:0 22px;
+  font-size:13px;
+  letter-spacing:0.08em;
+  font-weight:700;
+  text-transform:uppercase;
+  transition:all 0.2s;
+  text-align:center;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  border-radius:var(--radius-sm);
+  height:56px;
+  cursor:pointer;
+  border:1.5px solid transparent;
+  line-height:1;
+}
+.btn-primary{background:var(--brand-red);color:#fff;border-color:var(--brand-red)}
+.btn-primary:hover{background:var(--brand-red-dark);border-color:var(--brand-red-dark)}
+.btn-scheme{
+  background:#fff;
+  color:var(--brand-red);
+  border-color:var(--brand-red);
+  font-size:11.5px;
+  padding:0 14px;
+  flex-direction:column;
+  gap:0;
+  line-height:1.15;
+}
+.btn-scheme b{font-size:13px;font-weight:700;display:block;letter-spacing:0.06em}
+.btn-scheme:hover{background:rgba(191,19,4,0.05)}
+.btn-secondary{background:#fff;color:var(--ink);border:1.5px solid var(--ink);height:48px;font-size:12px;border-radius:var(--radius-pill)}
+.btn-secondary:hover{background:var(--ink);color:#fff}
+.cta-helper{font-size:11px;color:var(--ink-3);margin:8px 0 16px;text-align:center;line-height:1.5}
+
+/* === Trust strip === */
+.trust-strip{
+  border:1px solid var(--line);
+  background:#fff;
+  padding:4px 12px;
+  margin-bottom:16px;
+}
+.trust-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:11px 0;
+  border-bottom:1px solid var(--line);
+  font-size:12.5px;
+}
+.trust-row:last-child{border-bottom:none}
+.trust-icon{
+  flex-shrink:0;
+  width:32px;
+  height:32px;
+  background:var(--bg-pale);
+  color:var(--brand-red);
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  font-size:14px;
+}
+.trust-body{flex:1;min-width:0}
+.trust-body b{display:block;font-weight:600;margin-bottom:1px;color:var(--ink);font-size:12.5px}
+.trust-body span{color:var(--ink-3);font-size:11.5px;line-height:1.45}
+
+/* === Perks === */
+.perk-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:6px;
+  margin-bottom:18px;
+}
+@media(min-width:480px){.perk-grid{grid-template-columns:1fr 1fr}}
+.perk{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:11px 13px;
+  font-size:12px;
+  line-height:1.5;
+}
+.perk b{
+  display:block;
+  color:var(--brand-red);
+  font-weight:600;
+  margin-bottom:3px;
+  font-size:10px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+}
+.perk strong{font-weight:600;color:var(--ink)}
+.perk a{display:inline-block;margin-top:4px;color:var(--ink);border-bottom:1px solid var(--ink-3);font-size:11.5px}
+
+/* === Store availability === */
+.store-block{
+  margin-bottom:20px;
+  border:1px solid var(--line);
+  background:#fff;
+  overflow:hidden;
+}
+.store-head{
+  padding:12px 14px;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:12.5px;
+  flex-wrap:wrap;
+  gap:6px;
+}
+.store-head b{font-weight:600;color:var(--ink)}
+.store-head .nearest{color:var(--success);font-size:11px;font-weight:500}
+.store-list{padding:4px 0}
+.store-item{
+  padding:10px 14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  font-size:12.5px;
+  border-bottom:1px solid var(--line);
+}
+.store-item:last-child{border-bottom:none}
+.store-info{flex:1;min-width:0}
+.store-name{font-weight:500;color:var(--ink);font-size:12.5px;line-height:1.35}
+.store-meta{color:var(--ink-3);font-size:10.5px;margin-top:2px}
+.store-status{
+  font-size:10px;
+  letter-spacing:0.04em;
+  padding:3px 9px;
+  border-radius:var(--radius-pill);
+  font-weight:600;
+  text-transform:uppercase;
+  flex-shrink:0;
+  white-space:nowrap;
+}
+.store-status.in-stock{background:var(--success-pale);color:var(--success)}
+.store-status.ships-from{background:var(--warn-pale);color:var(--warn)}
+.store-cta-row{display:flex;gap:6px;padding:10px 14px;border-top:1px solid var(--line);background:var(--bg-soft)}
+.store-cta{
+  flex:1;
+  padding:11px;
+  font-size:11px;
+  letter-spacing:0.04em;
+  text-align:center;
+  border:1px solid var(--ink);
+  background:#fff;
+  color:var(--ink);
+  font-weight:600;
+  text-transform:uppercase;
+  border-radius:var(--radius-pill);
+  min-height:42px;
+  cursor:pointer;
+}
+.store-cta:hover{background:var(--ink);color:#fff}
+
+/* === Sections === */
+section.block{padding:40px 0;border-top:1px solid var(--line)}
+@media(min-width:768px){section.block{padding:56px 0}}
+section.block h2{
+  font-family:'Poppins',sans-serif;
+  font-size:20px;
+  font-weight:500;
+  margin-bottom:6px;
+  letter-spacing:-0.005em;
+  line-height:1.25;
+  color:var(--ink);
+}
+@media(min-width:768px){section.block h2{font-size:26px}}
+section.block .lead{color:var(--ink-2);font-size:13.5px;margin-bottom:24px;max-width:600px;line-height:1.6}
+@media(min-width:768px){section.block .lead{font-size:14.5px;margin-bottom:30px}}
+
+/* === Story === */
+.story{display:grid;grid-template-columns:1fr;gap:24px;align-items:start}
+@media(min-width:780px){.story{grid-template-columns:1fr 1fr;gap:40px}}
+.story-block{margin-bottom:24px}
+.story-block:last-child{margin-bottom:0}
+.story-tag{
+  font-size:10px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--brand-red);
+  font-weight:600;
+  margin-bottom:6px;
+}
+.story-block h3{
+  font-family:'Poppins',sans-serif;
+  font-size:17px;
+  font-weight:600;
+  margin-bottom:8px;
+  color:var(--ink);
+}
+@media(min-width:768px){.story-block h3{font-size:18px}}
+.story-block p{color:var(--ink-2);font-size:13.5px;line-height:1.7;margin-bottom:8px}
+
+/* === Specs grouped (Lucira-style) === */
+.spec-wrap{background:#fff;border:1px solid var(--line);overflow:hidden}
+.spec-sku{padding:14px 18px;border-bottom:1px solid var(--line);font-size:12px;color:var(--ink-3);background:var(--bg-soft);letter-spacing:0.02em}
+.spec-sku b{color:var(--ink);font-weight:600;letter-spacing:0.04em}
+.spec-group{border-bottom:1px solid var(--line)}
+.spec-group:last-child{border-bottom:none}
+.spec-group-title{
+  padding:13px 18px 6px;
+  font-size:11px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  font-weight:700;
+  color:var(--brand-red);
+}
+.spec-fields{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:0;
+  padding:0 6px 12px;
+}
+@media(min-width:560px){.spec-fields{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:768px){.spec-fields{grid-template-columns:repeat(4,1fr)}}
+.spec-field{padding:8px 12px}
+.spec-field dt{font-size:10.5px;color:var(--ink-3);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:3px;font-weight:500}
+.spec-field dd{font-size:13.5px;color:var(--ink);font-weight:500;line-height:1.35}
+
+/* Legacy spec table styles (kept for any other use) */
+.spec-table{background:#fff;border:1px solid var(--line);overflow:hidden}
+
+/* === Price details toggle (Lucira-style) === */
+.price-details{
+  margin-bottom:18px;
+  border:1px solid var(--line);
+  background:#fff;
+  overflow:hidden;
+}
+.price-details-head{
+  padding:13px 16px;
+  font-size:11px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  font-weight:700;
+  color:var(--ink);
+  background:var(--bg-soft);
+  border-bottom:1px solid var(--line);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.price-details-head::after{content:"−";color:var(--brand-red);font-size:18px;font-weight:300;transition:transform 0.2s}
+.price-details.collapsed .price-details-head::after{content:"+"}
+.price-details.collapsed .price-details-body{display:none}
+.price-tabs{
+  display:flex;
+  background:var(--bg-soft);
+  border-bottom:1px solid var(--line);
+}
+.price-tab{
+  flex:1;
+  padding:11px 12px;
+  font-size:12px;
+  font-weight:600;
+  text-align:center;
+  color:var(--ink-3);
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  letter-spacing:0.02em;
+  position:relative;
+  transition:color 0.2s;
+}
+.price-tab:hover{color:var(--ink)}
+.price-tab.active{color:var(--brand-red);background:#fff}
+.price-tab.active::after{
+  content:"";
+  position:absolute;
+  bottom:-1px;
+  left:0;
+  right:0;
+  height:2px;
+  background:var(--brand-red);
+}
+.price-panel{display:none;padding:8px 0}
+.price-panel.active{display:block}
+.price-line{
+  display:grid;
+  grid-template-columns:1.6fr auto auto;
+  gap:8px;
+  align-items:center;
+  padding:9px 16px;
+  font-size:12.5px;
+  border-bottom:1px solid var(--line);
+}
+.price-line:last-child{border-bottom:none}
+.price-line.total{
+  background:var(--bg-soft);
+  font-weight:600;
+  font-size:13.5px;
+  color:var(--ink);
+  padding:13px 16px;
+}
+.price-line.savings{
+  background:var(--bg-pale);
+  color:var(--brand-red);
+  font-weight:600;
+  padding:11px 16px;
+  font-size:12.5px;
+  border-top:1px dashed var(--line-2);
+}
+.pl-label{color:var(--ink-2)}
+.pl-label .sub{display:block;font-size:10.5px;color:var(--ink-3);margin-top:1px;font-weight:400}
+.pl-strike{
+  font-size:11.5px;
+  color:var(--ink-3);
+  text-decoration:line-through;
+  text-align:right;
+}
+.pl-value{
+  font-size:13px;
+  color:var(--ink);
+  font-weight:600;
+  text-align:right;
+  white-space:nowrap;
+}
+.pl-discount{
+  font-size:9.5px;
+  background:var(--brand-red);
+  color:#fff;
+  padding:2px 6px;
+  border-radius:var(--radius-pill);
+  font-weight:600;
+  letter-spacing:0.04em;
+  margin-left:6px;
+  white-space:nowrap;
+}
+.price-line.total .pl-value{color:var(--ink);font-size:15px}
+.price-tax-note{padding:8px 16px;font-size:10.5px;color:var(--ink-3);font-style:italic;background:var(--bg-soft);border-top:1px solid var(--line)}
+
+/* Price comparison styles */
+.compare-row-card{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 16px;
+  border-bottom:1px solid var(--line);
+  gap:14px;
+}
+.compare-row-card:last-child{border-bottom:none}
+.compare-row-card.you{background:var(--bg-pale);border-left:3px solid var(--brand-red)}
+.cr-info{flex:1;min-width:0}
+.cr-name{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.cr-info.you .cr-name{color:var(--brand-red)}
+.cr-meta{font-size:10.5px;color:var(--ink-3);line-height:1.4}
+.cr-price{font-size:14px;font-weight:600;color:var(--ink);white-space:nowrap;text-align:right}
+.cr-price .save{display:block;font-size:10px;color:var(--success);margin-top:2px;font-weight:500}
+.compare-note{padding:11px 16px;font-size:11px;color:var(--ink-3);background:var(--bg-soft);font-style:italic;line-height:1.5}
+
+/* === Process === */
+.process{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:6px;
+  margin-top:24px;
+}
+@media(min-width:560px){.process{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:980px){.process{grid-template-columns:repeat(7,1fr)}}
+.process-step{
+  text-align:center;
+  padding:14px 8px;
+  background:#fff;
+  border:1px solid var(--line);
+}
+.process-num{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:var(--brand-red);
+  color:#fff;
+  font-weight:600;
+  font-size:12px;
+  margin-bottom:8px;
+}
+.process-step b{display:block;font-size:12.5px;font-weight:600;margin-bottom:3px;color:var(--ink)}
+.process-step span{font-size:11px;color:var(--ink-3);line-height:1.4}
+
+/* === Compare table === */
+.compare-table{background:#fff;border:1px solid var(--line);overflow:hidden;margin-top:18px}
+.compare-head{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  background:var(--bg-soft);
+  font-size:10.5px;
+  letter-spacing:0.04em;
+  font-weight:600;
+  text-transform:uppercase;
+}
+.compare-head div{padding:10px 12px;border-right:1px solid var(--line);color:var(--ink-2)}
+.compare-head div:last-child{border-right:none}
+.compare-head div.tag-lab{background:var(--bg-pale);color:var(--brand-red)}
+.compare-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;font-size:12.5px;border-top:1px solid var(--line)}
+.compare-row div{padding:10px 12px;border-right:1px solid var(--line);color:var(--ink-2);display:flex;align-items:center}
+.compare-row div:last-child{border-right:none}
+.compare-row div:first-child{color:var(--ink);font-weight:500}
+.compare-row .tick{font-size:16px;font-weight:bold;justify-content:center;text-align:center}
+.compare-row .tick.yes{color:var(--success)}
+.compare-row .tick.no{color:var(--ink-3)}
+@media(min-width:768px){
+  .compare-head div, .compare-row div{padding:14px 16px;font-size:13px}
+  .compare-head{font-size:11.5px}
+}
+
+/* === Certificate === */
+.cert-block{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:24px;
+  align-items:center;
+  background:#fff;
+  border:1px solid var(--line);
+  padding:20px;
+}
+@media(min-width:680px){.cert-block{grid-template-columns:240px 1fr;padding:28px;gap:32px}}
+.cert-img{
+  background:#fff;
+  border:1px solid var(--line);
+  aspect-ratio:1/1.3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  text-align:center;
+  max-width:240px;
+  margin:0 auto;
+  width:100%;
+}
+.cert-img b{font-size:10px;letter-spacing:0.12em;color:var(--brand-red);text-transform:uppercase;display:block;margin-bottom:4px;font-weight:700}
+.cert-img h4{font-size:18px;font-weight:600;line-height:1.2;color:var(--ink);margin-bottom:4px}
+.cert-img p{font-size:10.5px;color:var(--ink-3)}
+.cert-img .crest{
+  width:42px;
+  height:42px;
+  border:2px solid var(--brand-red);
+  border-radius:50%;
+  margin:14px auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--brand-red);
+  font-weight:600;
+  font-size:16px;
+}
+.cert-body h3{font-size:17px;font-weight:600;margin-bottom:10px;color:var(--ink)}
+.cert-body p{color:var(--ink-2);margin-bottom:12px;font-size:13px;line-height:1.65}
+.cert-body ul{list-style:none;padding:0}
+.cert-body li{padding:5px 0;color:var(--ink-2);font-size:13px}
+.cert-body li::before{content:"✓ ";color:var(--success);font-weight:bold;margin-right:4px}
+
+/* === Reviews === */
+.review-summary{display:grid;grid-template-columns:1fr;gap:20px;margin-bottom:24px}
+@media(min-width:780px){.review-summary{grid-template-columns:1fr 1.8fr;gap:32px}}
+.review-score{
+  text-align:center;
+  background:#fff;
+  border:1px solid var(--line);
+  padding:22px;
+}
+.review-score .num{font-size:48px;font-weight:600;line-height:1;color:var(--ink)}
+.review-score .stars{color:#f5a623;font-size:16px;margin:8px 0 4px;letter-spacing:0.1em}
+.review-score .count{color:var(--ink-3);font-size:12px}
+.review-bars{padding:6px 0}
+.review-bar{
+  display:grid;
+  grid-template-columns:48px 1fr 38px;
+  gap:10px;
+  align-items:center;
+  margin-bottom:6px;
+  font-size:12px;
+}
+.review-bar .star-label{color:var(--ink-2)}
+.review-bar .bar{height:6px;background:var(--bg-soft);overflow:hidden;border-radius:var(--radius-pill)}
+.review-bar .bar-fill{height:100%;background:#f5a623}
+.review-bar .pct{color:var(--ink-3);font-size:11.5px}
+.recommend{
+  margin-top:14px;
+  text-align:center;
+  font-size:12px;
+  color:var(--success);
+  font-weight:600;
+  padding:8px;
+  background:var(--success-pale);
+}
+.review-filters{margin-top:14px;font-size:11.5px;color:var(--ink-3)}
+.review-filters a{color:var(--ink-3);margin-right:10px}
+.review-filters a.active{color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px}
+.review-list{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:780px){.review-list{grid-template-columns:1fr 1fr;gap:14px}}
+.review-card{background:#fff;border:1px solid var(--line);padding:18px}
+.review-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;font-size:12px;gap:10px;flex-wrap:wrap}
+.reviewer{display:flex;align-items:center;gap:9px;min-width:0}
+.reviewer-avatar{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:var(--bg-pale);
+  color:var(--brand-red);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
+  font-size:13px;
+  flex-shrink:0;
+}
+.reviewer-name{font-weight:600;font-size:12.5px;color:var(--ink)}
+.verified{font-size:9.5px;letter-spacing:0.05em;font-weight:600;color:var(--success);text-transform:uppercase}
+.review-stars{color:#f5a623;font-size:12px;letter-spacing:0.05em}
+.review-card p{font-size:13px;line-height:1.6;color:var(--ink-2);margin-bottom:8px}
+.review-date{color:var(--ink-3);font-size:11px}
+.see-all-reviews{
+  display:inline-block;
+  margin-top:24px;
+  font-size:12px;
+  letter-spacing:0.04em;
+  border-bottom:1.5px solid var(--brand-red);
+  color:var(--brand-red);
+  font-weight:600;
+  padding-bottom:3px;
+  text-transform:uppercase;
+}
+
+/* === Q&A === */
+.qa-list{max-width:760px;margin:0 auto}
+.qa-item{background:#fff;border:1px solid var(--line);margin-bottom:6px;overflow:hidden}
+.qa-q{
+  padding:14px 16px;
+  font-weight:600;
+  font-size:13.5px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  color:var(--ink);
+  gap:10px;
+  min-height:48px;
+}
+.qa-q::after{content:"+";color:var(--brand-red);font-size:22px;font-weight:300;transition:transform 0.2s;flex-shrink:0}
+.qa-item.open .qa-q::after{transform:rotate(45deg)}
+.qa-a{display:none;padding:0 16px 16px;color:var(--ink-2);font-size:13px;line-height:1.7}
+.qa-item.open .qa-a{display:block;padding-top:12px;border-top:1px solid var(--line)}
+
+/* === Cross-sell === */
+.cross-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+@media(min-width:780px){.cross-grid{grid-template-columns:repeat(4,1fr);gap:14px}}
+.cross-card{
+  background:#fff;
+  border:1px solid var(--line);
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.cross-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+.cross-img{aspect-ratio:1;background:var(--bg-soft);overflow:hidden}
+.cross-img img{width:100%;height:100%;object-fit:cover}
+.cross-info{padding:12px}
+.cross-tag{
+  font-size:9.5px;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--brand-red);
+  background:var(--bg-pale);
+  display:inline-block;
+  padding:2.5px 7px;
+  margin-bottom:6px;
+  font-weight:600;
+  border-radius:var(--radius-pill);
+}
+.cross-name{
+  font-size:13px;
+  line-height:1.35;
+  font-weight:500;
+  margin-bottom:5px;
+  color:var(--ink);
+  min-height:35px;
+}
+.cross-meta{font-size:10.5px;color:var(--ink-3);margin-bottom:6px}
+.cross-price{font-weight:600;font-size:13.5px;color:var(--ink)}
+
+/* === Footer === */
+footer{background:var(--ink);color:#a8a39a;padding:40px 0 20px;font-size:12.5px;margin-top:40px}
+@media(min-width:768px){footer{padding:50px 0 24px}}
+footer a{color:#d4ccbf;font-size:12.5px}
+footer a:hover{color:#fff}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-bottom:28px;
+}
+@media(min-width:560px){.footer-grid{grid-template-columns:repeat(4,1fr)}}
+.footer-col h4{
+  color:#fff;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:10px;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+}
+.footer-col li{list-style:none;margin-bottom:5px}
+.footer-search{margin-top:24px;border-top:1px solid #3a352e;padding-top:22px;font-size:11.5px;line-height:1.9;color:#7a7468}
+.footer-search h5{color:#a8a39a;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:8px;font-weight:600}
+.footer-search a{color:#a8a39a;font-size:11.5px}
+.footer-search span{color:#3a352e;margin:0 4px}
+.footer-bottom{
+  margin-top:24px;
+  padding-top:18px;
+  border-top:1px solid #3a352e;
+  text-align:center;
+  color:#5e5849;
+  font-size:11px;
+}
+
+/* === Sticky mobile bar === */
+.sticky-bar{
+  display:flex;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#fff;
+  border-top:1px solid var(--line);
+  padding:10px 12px env(safe-area-inset-bottom);
+  z-index:99;
+  box-shadow:0 -2px 12px rgba(0,0,0,0.06);
+  gap:10px;
+  align-items:center;
+}
+@media(min-width:980px){.sticky-bar{display:none}}
+.sticky-bar-info{flex:0 0 auto;font-size:11px;color:var(--ink-3);min-width:0}
+.sticky-bar-info b{display:block;font-size:14px;color:var(--ink);font-weight:600;line-height:1.2}
+.sticky-bar .btn{flex:1;height:44px;min-height:44px;padding:0 16px;font-size:11.5px;border-radius:var(--radius-sm);letter-spacing:0.06em}
+.sticky-wa{
+  flex-shrink:0;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:#25D366;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+}
+
+/* Body padding bottom to account for sticky bar on mobile */
+body{padding-bottom:72px}
+@media(min-width:980px){body{padding-bottom:0}}
+
+/* === Floating WhatsApp on desktop === */
+.float-wa{
+  display:none;
+  position:fixed;
+  bottom:24px;
+  right:24px;
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  background:#25D366;
+  color:#fff;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.18);
+  z-index:90;
+}
+@media(min-width:980px){.float-wa{display:flex}}
+</style>
+</head>
+<body>
+
+<!-- Promo bar -->
+<div class="promo">
+  <div class="promo-track">
+    <span><b>Shark Tank India</b></span>
+    <span><b>World's Brightest Diamond</b> · Portuguese Cut</span>
+    <span><b>IGI &amp; GIA Certified</b> · Lab Grown &amp; Natural</span>
+    <span><b>Lifetime Buyback &amp; Exchange</b></span>
+    <span><b>1000+ Google Reviews</b> · ★ 4.8</span>
+    <span><b>Free India Shipping</b> · 7-day Returns</span>
+    <span><b>Book a Free Home Trial</b> →</span>
+    <span><b>Shark Tank India</b></span>
+    <span><b>World's Brightest Diamond</b> · Portuguese Cut</span>
+    <span><b>IGI &amp; GIA Certified</b> · Lab Grown &amp; Natural</span>
+    <span><b>Lifetime Buyback &amp; Exchange</b></span>
+    <span><b>1000+ Google Reviews</b> · ★ 4.8</span>
+    <span><b>Free India Shipping</b> · 7-day Returns</span>
+    <span><b>Book a Free Home Trial</b> →</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header-inner">
+    <button class="hamburger">☰</button>
+    <a href="/" class="logo">TRUE<b>DIAMOND</b></a>
+    <nav class="nav">
+      <a href="#">Portuguese Cut</a>
+      <a href="#">Engagement</a>
+      <a href="#">Eternity</a>
+      <a href="#">Gifting</a>
+      <a href="#">Stores</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Search">⌕</button>
+      <button class="icon-btn" aria-label="Wishlist">♡</button>
+      <button class="icon-btn" aria-label="Cart">🛍<span class="cart-count">0</span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Breadcrumb -->
+<div class="container">
+  <nav class="crumb">
+    <a href="/">Home</a><span class="sep">›</span>
+    <a href="/collections/rings">Rings</a><span class="sep">›</span>
+    <a href="/collections/portuguese-cut-diamond">Portuguese Cut</a><span class="sep">›</span>
+    Mystical Petal
+  </nav>
+</div>
+
+<!-- PDP -->
+<div class="container pdp">
+
+  <!-- LEFT — Gallery -->
+  <div class="gallery">
+    <div class="gallery-main">
+      <span class="gallery-badge">Portuguese Cut · 161 Facets</span>
+      <img src="https://truediamond.in/cdn/shop/files/1_da71f196-1b75-43d9-84f3-ad2b248b2f81.png?v=1776735389&width=900" alt="3 ct Portuguese cut diamond marquise petal solitaire ring in white gold by True Diamond" id="mainImg" loading="eager">
+    </div>
+    <div class="gallery-thumbs">
+      <div class="thumb active"><img src="https://truediamond.in/cdn/shop/files/1_da71f196-1b75-43d9-84f3-ad2b248b2f81.png?v=1776735389&width=200" alt="" loading="lazy"></div>
+      <div class="thumb video"><img src="https://truediamond.in/cdn/shop/files/1_da71f196-1b75-43d9-84f3-ad2b248b2f81.png?v=1776735389&width=200" alt="" loading="lazy"></div>
+      <div class="thumb"><img src="https://truediamond.in/cdn/shop/files/Untitled_design_20.png?v=1768042025&width=200" alt="" loading="lazy"></div>
+      <div class="thumb"><img src="https://truediamond.in/cdn/shop/files/Picsart_26-01-09_17-44-36-493.jpg?v=1767961815&width=200" alt="" loading="lazy"></div>
+      <div class="thumb"><img src="https://truediamond.in/cdn/shop/files/Untitled_design_22.png?v=1768042333&width=200" alt="" loading="lazy"></div>
+      <div class="thumb"><img src="https://truediamond.in/cdn/shop/files/three_lovers_11_ct_dual_ring_16.png?v=1768539432&width=200" alt="" loading="lazy"></div>
+    </div>
+  </div>
+
+  <!-- RIGHT — Product info -->
+  <div class="info">
+    <div class="product-tag">True Diamond · Portuguese Cut Series</div>
+    <h1>Mystical Petal 3 Ct Portuguese Solitaire Ring</h1>
+    <div class="subhead">
+      <span class="stars">★★★★★</span>
+      <span class="stars-num">4.8</span>
+      <a href="#reviews">137 verified reviews</a>
+      <span class="pipe">|</span>
+      <span>TD-MP-3CT-PORT-001</span>
+    </div>
+
+    <div class="spec-chips">
+      <div class="chip">3.00 Ct · EF VS</div>
+      <div class="chip">161 facets</div>
+      <div class="chip">IGI certified</div>
+      <div class="chip">Lab grown</div>
+    </div>
+
+    <div class="live-viewers">
+      <span class="live-dot"></span>
+      <span><b>137 people</b> have viewed this design this week</span>
+    </div>
+
+    <div class="price-block">
+      <div class="price-row">
+        <div class="price-now">₹ 2,49,826</div>
+        <div class="price-was">₹ 2,76,537</div>
+        <div class="price-save-tag">10% off · Save ₹ 26,711</div>
+      </div>
+      <div class="price-savings">
+        <span>Flat 25% off on diamond prices</span>
+        <span>Flat 30% off on making charges</span>
+      </div>
+      <div class="price-note">Inclusive of GST · 14K Yellow Gold, size 12</div>
+    </div>
+
+    <!-- SIZE & CUSTOMIZATION heading -->
+    <div class="pdp-section-head">Size &amp; Customization</div>
+
+    <!-- METAL -->
+    <div class="variant">
+      <div class="variant-label">
+        <span>Select Gold Color &amp; Karat: <span class="selected">14KT Yellow Gold</span></span>
+      </div>
+      <div class="metal-grid">
+        <button class="opt-metal">
+          <span class="metal-swatch yellow"></span>
+          <span class="stack"><span class="karat">9KT</span><span class="metal-label">Yellow Gold</span></span>
+        </button>
+        <button class="opt-metal active">
+          <span class="metal-swatch yellow"></span>
+          <span class="stack"><span class="karat">14KT</span><span class="metal-label">Yellow Gold</span></span>
+        </button>
+        <button class="opt-metal">
+          <span class="metal-swatch yellow"></span>
+          <span class="stack"><span class="karat">18KT</span><span class="metal-label">Yellow Gold</span></span>
+        </button>
+        <button class="opt-metal">
+          <span class="metal-swatch rose"></span>
+          <span class="stack"><span class="karat">14KT</span><span class="metal-label">Rose Gold</span></span>
+        </button>
+        <button class="opt-metal">
+          <span class="metal-swatch rose"></span>
+          <span class="stack"><span class="karat">18KT</span><span class="metal-label">Rose Gold</span></span>
+        </button>
+        <button class="opt-metal">
+          <span class="metal-swatch white"></span>
+          <span class="stack"><span class="karat">14KT</span><span class="metal-label">White Gold</span></span>
+        </button>
+        <button class="opt-metal">
+          <span class="metal-swatch white"></span>
+          <span class="stack"><span class="karat">18KT</span><span class="metal-label">White Gold</span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- RING SIZE -->
+    <div class="variant">
+      <div class="variant-label">
+        <span>Select Ring Size: <span class="selected">12 IND</span></span>
+        <a href="#" class="help">Size Guide</a>
+      </div>
+      <div style="font-size:11.5px;color:var(--ink-3);margin-bottom:10px">Watch this <a href="#" style="color:var(--brand-red);border-bottom:1px solid var(--brand-red)">quick video</a> to measure your ring right.</div>
+      <div class="size-grid">
+        <button class="opt-size">5</button>
+        <button class="opt-size">6</button>
+        <button class="opt-size">7</button>
+        <button class="opt-size">8</button>
+        <button class="opt-size">9</button>
+        <button class="opt-size">10</button>
+        <button class="opt-size">11</button>
+        <button class="opt-size active">12</button>
+        <button class="opt-size">13</button>
+        <button class="opt-size">14</button>
+        <button class="opt-size">15</button>
+        <button class="opt-size">16</button>
+        <button class="opt-size">17</button>
+        <button class="opt-size">18</button>
+      </div>
+      <div class="size-helper">Didn't get the size right? <a href="#">We'll exchange it</a> — free, within 7 days.</div>
+    </div>
+
+    <!-- Engraving -->
+    <div class="engrave">
+      <div class="engrave-icon">✦</div>
+      <div class="engrave-body">
+        <b>Complimentary engraving</b>
+        Personalise the inner band with a date, name or message. Up to 18 characters, laser-engraved before dispatch.
+        <input type="text" placeholder="e.g. S &amp; R · 12.12.26" maxlength="18">
+      </div>
+    </div>
+
+    <!-- Delivery -->
+    <div class="deliver-bar">
+      <span>🚚</span>
+      <div><b>Free dispatch by 14 June 2026</b> to Mumbai 400028 · Made-to-order · Lifetime resizing</div>
+    </div>
+
+    <!-- Pincode check -->
+    <div class="pincode">
+      <input type="text" placeholder="Enter pincode to confirm delivery">
+      <button>Check</button>
+    </div>
+
+    <!-- CTAs — primary ATC + SAVE WITH SCHEME pill, then secondary Book Trial -->
+    <div class="cta-stack">
+      <div class="cta-row">
+        <button class="btn btn-primary">Add to Cart — ₹ 2,49,826</button>
+        <button class="btn btn-scheme"><span>You Save</span><b>₹ 24,983</b><span>With Scheme</span></button>
+      </div>
+      <button class="btn btn-secondary" style="width:100%">Book Free Home Trial</button>
+    </div>
+    <div class="cta-helper">Try this ring at home, free · Mumbai, Hyderabad, Pune, Noida, Delhi NCR</div>
+
+    <!-- Trust strip -->
+    <div class="trust-strip">
+      <div class="trust-row">
+        <div class="trust-icon">◆</div>
+        <div class="trust-body">
+          <b>IGI &amp; GIA certified, laser inscribed</b>
+          <span>Every diamond ships with its certificate · Verify on igi.org</span>
+        </div>
+      </div>
+      <div class="trust-row">
+        <div class="trust-icon">↺</div>
+        <div class="trust-body">
+          <b>Lifetime buyback at current diamond price</b>
+          <span>Trade back, anytime, at prevailing diamond value</span>
+        </div>
+      </div>
+      <div class="trust-row">
+        <div class="trust-icon">⇄</div>
+        <div class="trust-body">
+          <b>Lifetime exchange &amp; warranty</b>
+          <span>Resize, restyle or upgrade — no questions, no time limit</span>
+        </div>
+      </div>
+      <div class="trust-row">
+        <div class="trust-icon">✓</div>
+        <div class="trust-body">
+          <b>Free India shipping · 7-day returns</b>
+          <span>Fully insured · Discreet packaging</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Perks -->
+    <div class="perk-grid">
+      <div class="perk">
+        <b>True Diamond Coins</b>
+        <strong>Earn ₹2,498</strong> store credit. <a href="#">Learn more</a>
+      </div>
+      <div class="perk">
+        <b>True Harvest Plan</b>
+        Pay <strong>10 monthly EMIs</strong>, get 11th free. <a href="#">Calculate</a>
+      </div>
+      <div class="perk">
+        <b>Old Gold Exchange</b>
+        Exchange old gold at current market rate. <a href="#">How</a>
+      </div>
+      <div class="perk">
+        <b>EMI from ₹12,491/mo</b>
+        No-cost EMI on select cards. <a href="#">Options</a>
+      </div>
+    </div>
+
+    <!-- Price details toggle -->
+    <div class="price-details">
+      <div class="price-details-head">
+        <span>See Price Details</span>
+      </div>
+      <div class="price-details-body">
+        <div class="price-tabs">
+          <button class="price-tab active" data-tab="breakup">Price Breakup</button>
+          <button class="price-tab" data-tab="compare">Price Comparison</button>
+        </div>
+
+        <!-- BREAKUP -->
+        <div class="price-panel active" id="panel-breakup">
+          <div class="price-line">
+            <div class="pl-label">14K Gold <span class="sub">5.10 g @ ₹ 7,451 / g</span></div>
+            <div class="pl-strike"></div>
+            <div class="pl-value">₹ 37,990</div>
+          </div>
+          <div class="price-line">
+            <div class="pl-label">Lab Grown Diamond <span class="sub">3.63 ct · EF VS · IGI certified <span class="pl-discount">25% OFF</span></span></div>
+            <div class="pl-strike">₹ 2,40,000</div>
+            <div class="pl-value">₹ 1,80,000</div>
+          </div>
+          <div class="price-line">
+            <div class="pl-label">Making Charges <span class="sub">Tulip prong + petal halo setting <span class="pl-discount">30% OFF</span></span></div>
+            <div class="pl-strike">₹ 35,073</div>
+            <div class="pl-value">₹ 24,551</div>
+          </div>
+          <div class="price-line">
+            <div class="pl-label">GST (3%) <span class="sub">Inclusive on jewellery value</span></div>
+            <div class="pl-strike"></div>
+            <div class="pl-value">₹ 7,285</div>
+          </div>
+          <div class="price-line total">
+            <div class="pl-label">Total payable</div>
+            <div class="pl-strike"></div>
+            <div class="pl-value">₹ 2,49,826</div>
+          </div>
+          <div class="price-line savings">
+            <div class="pl-label">You save on this jewellery</div>
+            <div class="pl-strike"></div>
+            <div class="pl-value">₹ 70,522</div>
+          </div>
+          <div class="price-tax-note">All charges shown above are inclusive of taxes · Gold rate updated daily · Diamond price locked at the time of order</div>
+        </div>
+
+        <!-- COMPARISON -->
+        <div class="price-panel" id="panel-compare">
+          <div class="compare-row-card you">
+            <div class="cr-info you">
+              <div class="cr-name">True Diamond — Mystical Petal</div>
+              <div class="cr-meta">3.63 ct Portuguese cut · 161 facets · IGI certified · 14K Yellow</div>
+            </div>
+            <div class="cr-price">
+              ₹ 2,49,826
+              <span class="save">Your price</span>
+            </div>
+          </div>
+          <div class="compare-row-card">
+            <div class="cr-info">
+              <div class="cr-name">Equivalent lab grown round brilliant</div>
+              <div class="cr-meta">3.63 ct round cut · 57 facets · at other Indian brands</div>
+            </div>
+            <div class="cr-price">
+              ₹ 2,89,000
+              <span class="save" style="color:var(--ink-3)">~16% more</span>
+            </div>
+          </div>
+          <div class="compare-row-card">
+            <div class="cr-info">
+              <div class="cr-name">Equivalent mined diamond Portuguese cut</div>
+              <div class="cr-meta">3.63 ct mined · same colour and clarity grade</div>
+            </div>
+            <div class="cr-price">
+              ₹ 7,49,000
+              <span class="save" style="color:var(--ink-3)">~3× the price</span>
+            </div>
+          </div>
+          <div class="compare-row-card" style="background:var(--bg-pale)">
+            <div class="cr-info">
+              <div class="cr-name" style="color:var(--success)">You save vs mined equivalent</div>
+              <div class="cr-meta">For the brightest cut, in the same carat and quality.</div>
+            </div>
+            <div class="cr-price" style="color:var(--success);font-size:16px">
+              ₹ 4,99,174
+            </div>
+          </div>
+          <div class="compare-note">Market prices are based on a survey of 8 leading Indian jewellery retailers, sampled in May 2026. Mined diamond benchmarks are sourced from Rapaport. Pricing for comparable carat, colour, and clarity grades.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Store availability -->
+    <div class="store-block">
+      <div class="store-head">
+        <div><b>Available at True Diamond stores</b></div>
+        <div class="nearest">3 stores stock this design</div>
+      </div>
+      <div class="store-list">
+        <div class="store-item">
+          <div class="store-info">
+            <div class="store-name">Mumbai · Dadar West</div>
+            <div class="store-meta">Kohinoor Square · ★ 5.0 (369) · 6.2 km away</div>
+          </div>
+          <span class="store-status in-stock">In stock</span>
+        </div>
+        <div class="store-item">
+          <div class="store-info">
+            <div class="store-name">Mumbai · Goregaon East</div>
+            <div class="store-meta">Oberoi Mall · ★ 4.9 (412) · 12.4 km away</div>
+          </div>
+          <span class="store-status in-stock">In stock</span>
+        </div>
+        <div class="store-item">
+          <div class="store-info">
+            <div class="store-name">Pune · Phoenix Marketcity</div>
+            <div class="store-meta">Viman Nagar · ★ 4.8 (287) · 148 km away</div>
+          </div>
+          <span class="store-status ships-from">2-day ship</span>
+        </div>
+      </div>
+      <div class="store-cta-row">
+        <button class="store-cta">Book a visit</button>
+        <button class="store-cta">Try at home</button>
+      </div>
+    </div>
+
+    <!-- Collapsible info panels (Warranty / Care / Package) -->
+    <div class="info-accordion open">
+      <div class="info-accordion-head">Warranty &amp; Return Policy</div>
+      <div class="info-accordion-body">
+        <p style="margin-bottom:8px"><b>7-day free returns.</b> Not happy with your ring? Return it within 7 days of delivery for a full refund. The ring must be unworn, with all original packaging and the IGI certificate.</p>
+        <p style="margin-bottom:8px"><b>Lifetime exchange.</b> Trade your ring back to True Diamond at any time and we will credit the current diamond and metal value against a new piece. No expiry. No fine print.</p>
+        <p style="margin-bottom:8px"><b>Lifetime buyback.</b> Return your ring for cash at any time and we will pay you the current market value of the diamond and the gold.</p>
+        <p><b>Free resizing.</b> Up to 2 sizes either direction, anytime, no questions asked. Walk into any True Diamond store or ship to us insured at our expense.</p>
+      </div>
+    </div>
+
+    <div class="info-accordion">
+      <div class="info-accordion-head">Care &amp; Maintenance</div>
+      <div class="info-accordion-body">
+        <p style="margin-bottom:8px"><b>Daily wear.</b> Mystical Petal is built for daily wear. The marquise petals add a low-profile finish that won't snag on clothing or hair.</p>
+        <p style="margin-bottom:8px"><b>Cleaning at home.</b> Soak the ring in warm water with a drop of mild dish soap for 10 minutes. Brush gently with a soft baby toothbrush. Rinse and pat dry with a lint-free cloth.</p>
+        <p style="margin-bottom:8px"><b>Avoid.</b> Direct contact with bleach, chlorine, harsh detergents, hot tubs, and saltwater. Remove your ring before applying lotion, perfume or makeup.</p>
+        <p><b>Free professional cleaning.</b> Bring your ring to any True Diamond store every 6 months for a complimentary ultrasonic cleaning and prong check.</p>
+      </div>
+    </div>
+
+    <div class="info-accordion">
+      <div class="info-accordion-head">What's In The Package</div>
+      <div class="info-accordion-body">
+        <p style="margin-bottom:8px">Your Mystical Petal arrives in a signature True Diamond box, gift-ready:</p>
+        <p style="margin-bottom:6px">✦  Premium velvet ring box with TrueDiamond crest</p>
+        <p style="margin-bottom:6px">✦  Original IGI certificate of the diamond, in protective sleeve</p>
+        <p style="margin-bottom:6px">✦  BIS hallmark certification of the gold</p>
+        <p style="margin-bottom:6px">✦  Silver polishing cloth for at-home care</p>
+        <p style="margin-bottom:6px">✦  True Diamond care card with 99-year service guarantee</p>
+        <p style="margin-bottom:6px">✦  Engraving (if selected) laser-applied to the inner band</p>
+        <p>✦  Hand-written note (optional, free) — add a message at checkout</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="block" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="product-tag">About this ring</div>
+    <h2>A 3-carat Portuguese cut, framed by six marquise petals</h2>
+    <p class="lead">The Portuguese cut is the world's brightest diamond shape — 161 facets that catch and return light from every angle. Mystical Petal pairs a 3 ct Portuguese centre with six marquise accents, set like petals around a tulip.</p>
+
+    <div class="story">
+      <div>
+        <img src="https://truediamond.in/cdn/shop/files/Untitled_design_20.png?v=1768042025&width=900" alt="Side view of Mystical Petal solitaire ring with tulip prong setting" style="width:100%;border:1px solid var(--line)" loading="lazy">
+      </div>
+      <div>
+        <div class="story-block">
+          <div class="story-tag">Design story</div>
+          <h3>Why we call it Mystical Petal</h3>
+          <p>The Portuguese cut takes the brilliance of a round diamond and adds 100+ extra facets. Every angle of the stone reflects light, so the diamond looks bright even in candlelight. The marquise halo softens the centre's brilliance without taking attention from it. It is a ring designed to be looked at — and to be looked at twice.</p>
+        </div>
+        <div class="story-block">
+          <div class="story-tag">Diamond details</div>
+          <h3>The centre stone</h3>
+          <p>3.00 ct lab grown, IGI-certified, Portuguese cut, EF colour, VS clarity. Laser-inscribed on the girdle with its certificate number — verifiable on igi.org. The 6 marquise accents add 0.63 ct total (EF colour, VVS-VS clarity). Lab grown diamonds are chemically and optically identical to natural diamonds; only a laboratory machine can tell them apart.</p>
+        </div>
+        <div class="story-block">
+          <div class="story-tag">Crafting</div>
+          <h3>Made-to-order in our Mumbai atelier</h3>
+          <p>Available in 14K or 18K gold — yellow, rose or white. Net gold weight 4.2–5.1g depending on size and karat. The marquise petals are hand-set in a 4-prong tulip setting. Typical lead time 7–10 days. Every ring ships in a velvet box with the IGI certificate, polishing cloth and our 99-year care card.</p>
+        </div>
+        <div class="story-block">
+          <div class="story-tag">Wearing notes</div>
+          <h3>Built for everyday wear</h3>
+          <p>The marquise petals add a low-profile finish that won't snag on clothing. Pair with a 1–2mm plain band for stacking, or wear as a standalone statement. Suited to engagement, anniversary or milestone gifting. Resizable up to 2 sizes either direction under our Lifetime Exchange policy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS — grouped (Lucira-style) -->
+<section class="block">
+  <div class="container">
+    <h2>Product details</h2>
+    <p class="lead">A complete specification of the ring — metal, dimensions, diamond grading, certification.</p>
+
+    <div class="spec-wrap">
+      <div class="spec-sku">SKU: <b>TD-MP-3CT-PORT-001</b></div>
+
+      <div class="spec-group">
+        <div class="spec-group-title">Metal</div>
+        <div class="spec-fields">
+          <div class="spec-field"><dt>Purity</dt><dd>14KT</dd></div>
+          <div class="spec-field"><dt>Color</dt><dd>Yellow Gold</dd></div>
+          <div class="spec-field"><dt>Net Wt</dt><dd>4.85 g</dd></div>
+          <div class="spec-field"><dt>Hallmark</dt><dd>BIS · 14K</dd></div>
+        </div>
+      </div>
+
+      <div class="spec-group">
+        <div class="spec-group-title">Dimension</div>
+        <div class="spec-fields">
+          <div class="spec-field"><dt>Gross Wt</dt><dd>5.10 g</dd></div>
+          <div class="spec-field"><dt>Ring Size</dt><dd>12 IND (53.4 mm)</dd></div>
+          <div class="spec-field"><dt>Head Width</dt><dd>13.2 mm</dd></div>
+          <div class="spec-field"><dt>Band Width</dt><dd>1.8 mm</dd></div>
+        </div>
+      </div>
+
+      <div class="spec-group">
+        <div class="spec-group-title">Diamond — Centre</div>
+        <div class="spec-fields">
+          <div class="spec-field"><dt>Quality</dt><dd>VS, EF</dd></div>
+          <div class="spec-field"><dt>Shape</dt><dd>Portuguese (161-facet)</dd></div>
+          <div class="spec-field"><dt>Quantity</dt><dd>1 pcs</dd></div>
+          <div class="spec-field"><dt>Carat</dt><dd>3.00 ct</dd></div>
+          <div class="spec-field"><dt>Origin</dt><dd>Lab grown</dd></div>
+          <div class="spec-field"><dt>Polish</dt><dd>Excellent</dd></div>
+          <div class="spec-field"><dt>Symmetry</dt><dd>Excellent</dd></div>
+          <div class="spec-field"><dt>Fluorescence</dt><dd>None</dd></div>
+        </div>
+      </div>
+
+      <div class="spec-group">
+        <div class="spec-group-title">Diamond — Accents</div>
+        <div class="spec-fields">
+          <div class="spec-field"><dt>Quality</dt><dd>VVS-VS, EF</dd></div>
+          <div class="spec-field"><dt>Shape</dt><dd>Marquise</dd></div>
+          <div class="spec-field"><dt>Quantity</dt><dd>6 pcs</dd></div>
+          <div class="spec-field"><dt>Carat</dt><dd>0.63 ct total</dd></div>
+        </div>
+      </div>
+
+      <div class="spec-group">
+        <div class="spec-group-title">Setting &amp; Crafting</div>
+        <div class="spec-fields">
+          <div class="spec-field"><dt>Setting</dt><dd>Marquise petal halo</dd></div>
+          <div class="spec-field"><dt>Prongs</dt><dd>4-prong tulip</dd></div>
+          <div class="spec-field"><dt>Made in</dt><dd>Mumbai, India</dd></div>
+          <div class="spec-field"><dt>Lead time</dt><dd>7–10 working days</dd></div>
+        </div>
+      </div>
+
+      <div class="spec-group">
+        <div class="spec-group-title">Certification</div>
+        <div class="spec-fields">
+          <div class="spec-field"><dt>Diamond</dt><dd>IGI · laser inscribed</dd></div>
+          <div class="spec-field"><dt>Metal</dt><dd>BIS hallmarked</dd></div>
+          <div class="spec-field"><dt>GIA upgrade</dt><dd>Available · +₹3,500</dd></div>
+          <div class="spec-field"><dt>Verify at</dt><dd>igi.org</dd></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STYLED BY TRUE DIAMOND -->
+<section class="block">
+  <div class="container">
+    <div class="product-tag">Styled by True Diamond</div>
+    <h2>Three ways to wear Mystical Petal</h2>
+    <p class="lead">Our atelier team styled this ring three ways — pick the one that matches your moment.</p>
+
+    <div style="display:grid;grid-template-columns:1fr;gap:20px;margin-top:8px" id="styled-grid">
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;padding:16px;background:#fff;border:1px solid var(--line);border-radius:8px">
+        <img src="https://truediamond.in/cdn/shop/files/Picsart_26-01-09_17-44-36-493.jpg?v=1767961815&width=400" alt="" style="width:120px;height:120px;object-fit:cover;border-radius:8px" loading="lazy">
+        <div>
+          <div class="product-tag" style="margin-bottom:6px">Engagement</div>
+          <h3 style="font-size:16px;font-weight:600;margin-bottom:4px;color:var(--ink)">Solo statement</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.6">Wear Mystical Petal as a stand-alone solitaire — the 161-facet brilliance does all the talking. Pair with a delicate gold chain pendant and minimal earrings to keep the ring the focal point.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;padding:16px;background:#fff;border:1px solid var(--line);border-radius:8px">
+        <img src="https://truediamond.in/cdn/shop/files/half-eternal-forever-band-marquise-pear-front.jpg?v=1757153128&width=400" alt="" style="width:120px;height:120px;object-fit:cover;border-radius:8px" loading="lazy">
+        <div>
+          <div class="product-tag" style="margin-bottom:6px">Wedding stack</div>
+          <h3 style="font-size:16px;font-weight:600;margin-bottom:4px;color:var(--ink)">Petal echo</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.6">Stack with our Marquise &amp; Pear half-eternity band — the marquise petals on the band echo the centre setting. Two-row look, one consistent design language.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;padding:16px;background:#fff;border:1px solid var(--line);border-radius:8px">
+        <img src="https://truediamond.in/cdn/shop/files/round-eternity-band-4.5ct-standing.jpg?v=1757056781&width=400" alt="" style="width:120px;height:120px;object-fit:cover;border-radius:8px" loading="lazy">
+        <div>
+          <div class="product-tag" style="margin-bottom:6px">Everyday glamour</div>
+          <h3 style="font-size:16px;font-weight:600;margin-bottom:4px;color:var(--ink)">Triple layered</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.6">Layer with our 4.5 Ct Eternelle round eternity band on one side and a plain 1.5mm band on the other — for buyers who treat their solitaire as the centrepiece of a curated finger stack.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="block" style="background:var(--bg-soft)">
+  <div class="container">
+    <h2>How your ring is made</h2>
+    <p class="lead">Each Mystical Petal is hand-crafted in our Mumbai atelier — from sketch to your finger in 7 steps.</p>
+    <div class="process">
+      <div class="process-step"><div class="process-num">1</div><b>Sketch</b><span>Hand-drawn with you</span></div>
+      <div class="process-step"><div class="process-num">2</div><b>3D model</b><span>CAD render approval</span></div>
+      <div class="process-step"><div class="process-num">3</div><b>Wax cast</b><span>Lost-wax mould</span></div>
+      <div class="process-step"><div class="process-num">4</div><b>Gold pour</b><span>14K/18K alloy</span></div>
+      <div class="process-step"><div class="process-num">5</div><b>Stone set</b><span>Petals hand-set</span></div>
+      <div class="process-step"><div class="process-num">6</div><b>Polish &amp; QC</b><span>Master jeweller check</span></div>
+      <div class="process-step"><div class="process-num">7</div><b>Ship</b><span>Insured · velvet-box</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERT -->
+<section class="block">
+  <div class="container">
+    <h2>Every diamond ships with an IGI certificate</h2>
+    <p class="lead">A unique, internationally recognised IGI certificate — laser-inscribed on the diamond's girdle and verifiable online at igi.org.</p>
+
+    <div class="cert-block">
+      <div class="cert-img">
+        <div>
+          <b>IGI</b>
+          <h4>Lab Grown Diamond Report</h4>
+          <p>International Gemmological Institute</p>
+          <div class="crest">★</div>
+          <p style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3)">LG 619 524 8XXX</p>
+          <p style="font-size:10px;margin-top:8px;color:var(--ink-3)">Sample · for illustration</p>
+        </div>
+      </div>
+      <div class="cert-body">
+        <h3>A real, verifiable certificate</h3>
+        <p>Each certificate documents the diamond's 4Cs (cut, carat, colour, clarity), measurements, polish, symmetry and fluorescence. We never substitute or alter certificates after the diamond ships.</p>
+        <ul>
+          <li>Issued by IGI — the world's largest gemmological institute</li>
+          <li>Cert number laser-inscribed on the diamond's girdle</li>
+          <li>Verify online at igi.org with the cert number</li>
+          <li>GIA upgrade available at order time</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAB VS MINED -->
+<section class="block" style="background:var(--bg-soft)">
+  <div class="container">
+    <h2>Lab grown vs mined diamonds</h2>
+    <p class="lead">Chemically and optically identical. Only a laboratory machine can tell them apart. The differences are origin, price and environmental impact.</p>
+
+    <div class="compare-table">
+      <div class="compare-head">
+        <div>Property</div>
+        <div class="tag-lab">Lab grown · True Diamond</div>
+        <div>Mined diamond</div>
+      </div>
+      <div class="compare-row"><div>Real diamond (carbon crystal)</div><div class="tick yes">✓</div><div class="tick yes">✓</div></div>
+      <div class="compare-row"><div>Certified by IGI / GIA</div><div class="tick yes">✓</div><div class="tick yes">✓</div></div>
+      <div class="compare-row"><div>Indistinguishable to the naked eye</div><div class="tick yes">✓</div><div class="tick yes">✓</div></div>
+      <div class="compare-row"><div>40–70% more value for same quality</div><div class="tick yes">✓</div><div class="tick no">—</div></div>
+      <div class="compare-row"><div>Conflict-free, traceable origin</div><div class="tick yes">✓</div><div class="tick no">—</div></div>
+      <div class="compare-row"><div>Lower carbon footprint</div><div class="tick yes">✓</div><div class="tick no">—</div></div>
+      <div class="compare-row"><div>Lifetime buyback at current value</div><div class="tick yes">✓</div><div class="tick no">Limited</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="block" id="reviews">
+  <div class="container">
+    <h2>Customer reviews</h2>
+    <p class="lead">137 verified reviews from buyers who actually purchased and received this ring.</p>
+
+    <div class="review-summary">
+      <div class="review-score">
+        <div class="num">4.8</div>
+        <div class="stars">★★★★★</div>
+        <div class="count">137 verified reviews</div>
+        <div class="recommend">100% would recommend</div>
+      </div>
+      <div class="review-bars">
+        <div class="review-bar"><span class="star-label">5 stars</span><div class="bar"><div class="bar-fill" style="width:84%"></div></div><span class="pct">84%</span></div>
+        <div class="review-bar"><span class="star-label">4 stars</span><div class="bar"><div class="bar-fill" style="width:12%"></div></div><span class="pct">12%</span></div>
+        <div class="review-bar"><span class="star-label">3 stars</span><div class="bar"><div class="bar-fill" style="width:3%"></div></div><span class="pct">3%</span></div>
+        <div class="review-bar"><span class="star-label">2 stars</span><div class="bar"><div class="bar-fill" style="width:1%"></div></div><span class="pct">1%</span></div>
+        <div class="review-bar"><span class="star-label">1 star</span><div class="bar"><div class="bar-fill" style="width:0%"></div></div><span class="pct">0%</span></div>
+        <div class="review-filters">Filter: <a href="#" class="active">All ratings</a><a href="#">With photos</a><a href="#">3+ stars</a></div>
+      </div>
+    </div>
+
+    <div class="review-list">
+      <div class="review-card">
+        <div class="review-head">
+          <div class="reviewer">
+            <div class="reviewer-avatar">DR</div>
+            <div>
+              <div class="reviewer-name">Diksha R.</div>
+              <div class="verified">✓ Verified buyer</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <p>"This is the brightest diamond I have ever seen — and I tried 8 rings from other brands before this one. The Portuguese cut is real. My husband said in candlelight it looks like a small fire on my hand."</p>
+        <div class="review-date">14 May 2026 · Mumbai · 14K Yellow Gold, Size 12</div>
+      </div>
+      <div class="review-card">
+        <div class="review-head">
+          <div class="reviewer">
+            <div class="reviewer-avatar">RH</div>
+            <div>
+              <div class="reviewer-name">Rushali H.</div>
+              <div class="verified">✓ Verified buyer</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <p>"We came in for an engagement ring and walked out with this. The store team in Dadar West is incredible — they let me try every Portuguese cut piece before deciding. Mystical Petal won. The petals just sit beautifully."</p>
+        <div class="review-date">2 May 2026 · Mumbai · 18K Rose Gold, Size 14</div>
+      </div>
+      <div class="review-card">
+        <div class="review-head">
+          <div class="reviewer">
+            <div class="reviewer-avatar">AS</div>
+            <div>
+              <div class="reviewer-name">Anand S.</div>
+              <div class="verified">✓ Verified buyer</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <p>"Bought for our 10-year anniversary. The home trial service is the reason we picked True Diamond. We tried 3 designs at home over a week, no pressure. Mystical Petal was an instant favourite. Free engraving was a lovely surprise."</p>
+        <div class="review-date">21 April 2026 · Pune · 18K Yellow Gold, Size 11</div>
+      </div>
+      <div class="review-card">
+        <div class="review-head">
+          <div class="reviewer">
+            <div class="reviewer-avatar">PT</div>
+            <div>
+              <div class="reviewer-name">Pooja T.</div>
+              <div class="verified">✓ Verified buyer</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★☆</div>
+        </div>
+        <p>"Stunning ring. Knocked off one star because the made-to-order lead time was 11 days, not 7–10 as promised. Worth the wait though — the brilliance is genuinely different from any other diamond I have seen."</p>
+        <div class="review-date">3 April 2026 · Hyderabad · 14K White Gold, Size 13</div>
+      </div>
+    </div>
+    <div style="text-align:center"><a href="#" class="see-all-reviews">Read all 137 reviews →</a></div>
+  </div>
+</section>
+
+<!-- Q&A -->
+<section class="block" style="background:var(--bg-soft)">
+  <div class="container">
+    <h2>Your questions, answered</h2>
+    <p class="lead">The most common questions buyers ask before purchasing a Portuguese cut solitaire.</p>
+
+    <div class="qa-list">
+      <div class="qa-item open">
+        <div class="qa-q">What makes the Portuguese cut different?</div>
+        <div class="qa-a">A standard round brilliant diamond has 57 or 58 facets. Our Portuguese cut has 161+ facets — each cut and polished individually. The extra facets reflect and refract light from many more angles, which is why the Portuguese cut earns the title of the world's brightest diamond.</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">Will a lab grown diamond test as a real diamond?</div>
+        <div class="qa-a">Yes. Lab grown diamonds are chemically and optically identical to mined diamonds — pure crystallised carbon. They test as real diamonds on every standard diamond tester. Only a specialist laboratory machine that detects nitrogen presence can tell them apart, and even then it usually requires a CVD-grown stone.</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">What does your Lifetime Buyback Policy actually mean?</div>
+        <div class="qa-a">You can return your diamond ring to True Diamond at any time — 1 year later or 30 years later — and we will pay you the current market value of the diamond. Not the price you paid, the price the diamond is worth today. The metal (gold) value is also refunded at current rates. There is no expiry and no fine print.</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">How does the home trial work?</div>
+        <div class="qa-a">If you live in Mumbai, Hyderabad, Pune, Noida or Delhi NCR, you can book a free home trial. We send up to 3 designs (in your selected size, with replica stones) to your home for 7 days. You decide in your own time, with your own light, with the people whose opinions matter to you. There is no purchase obligation.</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">Can I resize this ring after purchase?</div>
+        <div class="qa-a">Yes. Under our Lifetime Exchange policy, we resize your ring up to 2 sizes either direction at any time, for free. For larger size changes we re-cast the band at material cost only. Bring it to any True Diamond store, or ship it to us insured at our expense.</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">What if I want a GIA certificate instead of IGI?</div>
+        <div class="qa-a">Both IGI and GIA are world-class diamond grading laboratories. IGI is the standard on lab grown diamonds and is included free with every ring. If you would prefer a GIA certificate, we can re-certify the stone with GIA at order time for an additional ₹3,500. Mention it in the order notes or during your store visit.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CROSS-SELL -->
+<section class="block">
+  <div class="container">
+    <h2>Pair Mystical Petal with</h2>
+    <p class="lead">Designs that complement the Portuguese cut centre, hand-picked by our atelier team.</p>
+
+    <div class="cross-grid">
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/celestial-pear-round-eternity-band-front.jpg?v=1757411393&width=600" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Recommended</div>
+          <div class="cross-name">Celestial 3 Ct Pear &amp; Round Eternity Band</div>
+          <div class="cross-meta">3.00 ct · 14K/18K · EF VS</div>
+          <div class="cross-price">₹ 1,99,893</div>
+        </div>
+      </div>
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/round-eternity-band-4.5ct-standing.jpg?v=1757056781&width=600" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Bestseller</div>
+          <div class="cross-name">Eternelle 4.5 Ct Round Eternity Band</div>
+          <div class="cross-meta">4.50 ct · 14K/18K · EF VS</div>
+          <div class="cross-price">₹ 2,04,130</div>
+        </div>
+      </div>
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/half-eternal-forever-band-marquise-pear-front.jpg?v=1757153128&width=600" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Petal motif</div>
+          <div class="cross-name">Eternal Forever Marquise &amp; Pear Band</div>
+          <div class="cross-meta">0.67 ct · 14K/18K · EF VS</div>
+          <div class="cross-price">₹ 43,451</div>
+        </div>
+      </div>
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/HarshandRushaliToi-et-MoiRing.jpg?v=1767963357&width=600" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Stack with</div>
+          <div class="cross-name">Harsh &amp; Rushali Toi-et-Moi Ring</div>
+          <div class="cross-meta">2.00 ct · 14K/18K · EF VS</div>
+          <div class="cross-price">₹ 1,27,154</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECENTLY VIEWED -->
+<section class="block" style="background:var(--bg-soft)">
+  <div class="container">
+    <h2>Recently viewed</h2>
+    <p class="lead">Pick up where you left off.</p>
+    <div class="h-scroll">
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/1_da71f196-1b75-43d9-84f3-ad2b248b2f81.png?v=1776735389&width=400" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Viewing</div>
+          <div class="cross-name">Mystical Petal 3 Ct Portuguese</div>
+          <div class="cross-meta">★ 4.8 (137) · 14K Yellow</div>
+          <div class="cross-price">₹ 2,49,826</div>
+        </div>
+      </div>
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/Untitled_design_20.png?v=1768042025&width=400" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Hidden gem</div>
+          <div class="cross-name">5.9 Ct Portuguese Hidden Gemstone Ring</div>
+          <div class="cross-meta">★ 4.9 (62) · 14K Yellow</div>
+          <div class="cross-price">₹ 4,24,042</div>
+        </div>
+      </div>
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/Picsart_26-01-09_17-44-36-493.jpg?v=1767961815&width=400" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Trending</div>
+          <div class="cross-name">Aura 2.6 Ct Portuguese Solitaire</div>
+          <div class="cross-meta">★ 4.7 (94) · 14K Yellow</div>
+          <div class="cross-price">₹ 2,09,787</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FROM THE SAME COLLECTION -->
+<section class="block">
+  <div class="container">
+    <h2>From the Portuguese Cut Collection</h2>
+    <p class="lead">More designs in the same series — the world's brightest diamond shape, hand-crafted in our Mumbai atelier.</p>
+    <div class="h-scroll">
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/Untitled_design_20.png?v=1768042025&width=400" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Bestseller</div>
+          <div class="cross-name">5.9 Ct Hidden Gemstone Solitaire</div>
+          <div class="cross-meta">5.90 ct · 18K</div>
+          <div class="cross-price">₹ 4,24,042</div>
+        </div>
+      </div>
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/Picsart_26-01-09_17-44-36-493.jpg?v=1767961815&width=400" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Trending</div>
+          <div class="cross-name">Aura 2.6 Ct Portuguese Solitaire</div>
+          <div class="cross-meta">2.60 ct · 14K</div>
+          <div class="cross-price">₹ 2,09,787</div>
+        </div>
+      </div>
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/Untitled_design_22.png?v=1768042333&width=400" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Big rock</div>
+          <div class="cross-name">Portuguese Cut 4 Ct Big Rock</div>
+          <div class="cross-meta">4.00 ct · 18K</div>
+          <div class="cross-price">₹ 2,94,488</div>
+        </div>
+      </div>
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/three_lovers_11_ct_dual_ring_16.png?v=1768539432&width=400" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Statement</div>
+          <div class="cross-name">Noir 2.6 Ct Black Diamond Cocktail</div>
+          <div class="cross-meta">2.60 ct · 14K</div>
+          <div class="cross-price">₹ 1,75,478</div>
+        </div>
+      </div>
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/1767702536808.jpg?v=1767962994&width=400" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Yellow stone</div>
+          <div class="cross-name">Radiant Sunbeam 1 Ct Yellow Cushion</div>
+          <div class="cross-meta">1.00 ct · 14K</div>
+          <div class="cross-price">₹ 1,26,872</div>
+        </div>
+      </div>
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/three_lovers_11_ct_dual_ring_17.png?v=1768539846&width=400" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Ocean</div>
+          <div class="cross-name">Ocean Crest 2.5 Ct Oval Cocktail</div>
+          <div class="cross-meta">2.50 ct · 14K</div>
+          <div class="cross-price">₹ 1,43,215</div>
+        </div>
+      </div>
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/three-or-one-stackable-ring.png?v=1758265314&width=400" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Stackable</div>
+          <div class="cross-name">Three or One 2.8 Ct Stackable</div>
+          <div class="cross-meta">2.80 ct · 14K</div>
+          <div class="cross-price">₹ 1,58,742</div>
+        </div>
+      </div>
+      <div class="cross-card">
+        <div class="cross-img"><img src="https://truediamond.in/cdn/shop/files/1767768260317.jpg?v=1767935415&width=400" alt="" loading="lazy"></div>
+        <div class="cross-info">
+          <div class="cross-tag">Lily cut</div>
+          <div class="cross-name">Layered Lily 1.82 Ct Lily Cut Solitaire</div>
+          <div class="cross-meta">1.82 ct · 14K</div>
+          <div class="cross-price">₹ 1,55,200</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE OUR RANGE -->
+<section class="block" style="background:var(--bg-soft)">
+  <div class="container">
+    <h2>Explore our range</h2>
+    <p class="lead">Find diamond jewellery for every moment.</p>
+    <div class="explore-grid">
+      <a class="explore-tile"><span class="explore-icon">◆</span><span class="explore-label">Rings</span></a>
+      <a class="explore-tile"><span class="explore-icon">○</span><span class="explore-label">Earrings</span></a>
+      <a class="explore-tile"><span class="explore-icon">⌒</span><span class="explore-label">Bracelets</span></a>
+      <a class="explore-tile"><span class="explore-icon">♥</span><span class="explore-label">Pendants</span></a>
+      <a class="explore-tile"><span class="explore-icon">⌬</span><span class="explore-label">Tennis Bracelets</span></a>
+      <a class="explore-tile"><span class="explore-icon">✿</span><span class="explore-label">Eternity bands</span></a>
+      <a class="explore-tile"><span class="explore-icon">∞</span><span class="explore-label">Toi-et-Moi</span></a>
+      <a class="explore-tile"><span class="explore-icon">♂</span><span class="explore-label">Men's</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FIND IN STORE (full width) -->
+<section class="block">
+  <div class="container">
+    <h2>Find Mystical Petal at a True Diamond store near you</h2>
+    <p class="lead">Try the ring in person, on your finger, in any of our 7 stores across India. Book a visit or have it shipped to your nearest store.</p>
+
+    <div class="store-finder">
+      <div class="store-finder-head">
+        <div style="font-size:13px;font-weight:600;color:var(--ink)">Check availability:</div>
+        <div class="store-finder-pin">
+          <input type="text" placeholder="Enter your pincode">
+          <button>Check</button>
+        </div>
+      </div>
+
+      <div class="store-card-grid">
+        <div class="store-card">
+          <div class="store-card-head">
+            <div>
+              <div class="store-card-name">Mumbai · Dadar West</div>
+              <div class="store-card-addr">902, Kohinoor Square, Shivaji Park, Dadar West, Mumbai 400028</div>
+            </div>
+            <span class="store-card-status in-stock">In stock</span>
+          </div>
+          <div class="store-card-meta"><b>★ 5.0</b> (369) · Open today 11am–9pm · 6.2 km</div>
+          <div class="store-card-actions">
+            <button class="store-card-btn primary">Book a visit</button>
+            <button class="store-card-btn">Call</button>
+            <button class="store-card-btn">Directions</button>
+          </div>
+        </div>
+
+        <div class="store-card">
+          <div class="store-card-head">
+            <div>
+              <div class="store-card-name">Mumbai · Goregaon East</div>
+              <div class="store-card-addr">S-33, Second Floor, Oberoi Mall, Goregaon East, Mumbai 400063</div>
+            </div>
+            <span class="store-card-status in-stock">In stock</span>
+          </div>
+          <div class="store-card-meta"><b>★ 4.9</b> (412) · Open today 11am–10pm · 12.4 km</div>
+          <div class="store-card-actions">
+            <button class="store-card-btn primary">Book a visit</button>
+            <button class="store-card-btn">Call</button>
+            <button class="store-card-btn">Directions</button>
+          </div>
+        </div>
+
+        <div class="store-card">
+          <div class="store-card-head">
+            <div>
+              <div class="store-card-name">Pune · Phoenix Marketcity</div>
+              <div class="store-card-addr">LG-41, Phoenix Marketcity Mall, Nagar Road, Viman Nagar, Pune 411014</div>
+            </div>
+            <span class="store-card-status ships-from">2-day ship</span>
+          </div>
+          <div class="store-card-meta"><b>★ 4.8</b> (287) · Open today 11am–10pm · 148 km</div>
+          <div class="store-card-actions">
+            <button class="store-card-btn primary">Book a visit</button>
+            <button class="store-card-btn">Call</button>
+            <button class="store-card-btn">Directions</button>
+          </div>
+        </div>
+
+        <div class="store-card">
+          <div class="store-card-head">
+            <div>
+              <div class="store-card-name">Hyderabad · Banjara Hills</div>
+              <div class="store-card-addr">Broadway, Vamsiram BSR 01, Road No 2, Banjara Hills, Hyderabad 500034</div>
+            </div>
+            <span class="store-card-status ships-from">2-day ship</span>
+          </div>
+          <div class="store-card-meta"><b>★ 4.9</b> (524) · Open today 11am–9pm · 707 km</div>
+          <div class="store-card-actions">
+            <button class="store-card-btn primary">Book a visit</button>
+            <button class="store-card-btn">Call</button>
+            <button class="store-card-btn">Directions</button>
+          </div>
+        </div>
+
+        <div class="store-card">
+          <div class="store-card-head">
+            <div>
+              <div class="store-card-name">Hyderabad · Kukatpally</div>
+              <div class="store-card-addr">L2-38, Lakeshore Mall, 414p-419p, Bala Nagar, Kukatpally, Hyderabad 500072</div>
+            </div>
+            <span class="store-card-status ships-from">3-day ship</span>
+          </div>
+          <div class="store-card-meta"><b>★ 4.7</b> (218) · Open today 11am–10pm · 712 km</div>
+          <div class="store-card-actions">
+            <button class="store-card-btn primary">Book a visit</button>
+            <button class="store-card-btn">Call</button>
+            <button class="store-card-btn">Directions</button>
+          </div>
+        </div>
+
+        <div class="store-card">
+          <div class="store-card-head">
+            <div>
+              <div class="store-card-name">Noida · Wave One Mall</div>
+              <div class="store-card-addr">Shop No. 34, Wave One Mall, Sector 18, Noida, Delhi NCR 201301</div>
+            </div>
+            <span class="store-card-status ships-from">2-day ship</span>
+          </div>
+          <div class="store-card-meta"><b>★ 4.8</b> (193) · Open today 11am–10pm · 1,408 km</div>
+          <div class="store-card-actions">
+            <button class="store-card-btn primary">Book a visit</button>
+            <button class="store-card-btn">Call</button>
+            <button class="store-card-btn">Directions</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="block" style="padding-top:0;border-top:none">
+  <div class="container">
+    <div class="newsletter">
+      <h2>Join the True Diamond community</h2>
+      <p>Early access to Portuguese cut drops, jewellery care tips, and members-only events at your nearest store. No spam, ever.</p>
+      <form class="newsletter-form" onsubmit="event.preventDefault();this.querySelector('input').value='Thanks — check your inbox!'">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <small>You can unsubscribe anytime. Read our <a href="#" style="color:var(--ink);border-bottom:1px solid var(--ink-3)">privacy policy</a>.</small>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>True Diamond</h4>
+        <p style="color:#a8a39a;font-size:12px;line-height:1.7;margin-bottom:10px">Home of the Portuguese cut — the world's brightest diamond. Lab grown solitaires, certified IGI &amp; GIA, designed and crafted in Mumbai.</p>
+        <p style="font-size:12px"><a href="mailto:hi@truediamond.in">hi@truediamond.in</a><br><a href="tel:+918200532030">+91 82005 32030</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">Solitaires</a></li>
+          <li><a href="#">Portuguese cut</a></li>
+          <li><a href="#">Eternity bands</a></li>
+          <li><a href="#">Toi-et-Moi</a></li>
+          <li><a href="#">3-Stone</a></li>
+          <li><a href="#">Cocktail</a></li>
+          <li><a href="#">Gifting ₹60K</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Promise</h4>
+        <ul>
+          <li><a href="#">Lifetime buyback</a></li>
+          <li><a href="#">Lifetime exchange</a></li>
+          <li><a href="#">Lifetime warranty</a></li>
+          <li><a href="#">7-day returns</a></li>
+          <li><a href="#">Old gold exchange</a></li>
+          <li><a href="#">True Harvest plan</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="#">Mumbai · Dadar West</a></li>
+          <li><a href="#">Mumbai · Goregaon East</a></li>
+          <li><a href="#">Pune · Phoenix</a></li>
+          <li><a href="#">Hyderabad · Banjara Hills</a></li>
+          <li><a href="#">Hyderabad · Kukatpally</a></li>
+          <li><a href="#">Noida · Wave One</a></li>
+          <li><a href="#">Book home trial →</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-search">
+      <h5>Popular searches</h5>
+      <div>
+        <a href="#">Portuguese cut diamond ring</a><span>|</span>
+        <a href="#">3 carat diamond ring</a><span>|</span>
+        <a href="#">2 carat solitaire ring</a><span>|</span>
+        <a href="#">1 carat solitaire ring</a><span>|</span>
+        <a href="#">Lab grown diamond ring India</a><span>|</span>
+        <a href="#">Engagement ring under ₹1 lakh</a><span>|</span>
+        <a href="#">Diamond ring under ₹60,000</a><span>|</span>
+        <a href="#">Diamond ring under ₹50,000</a><span>|</span>
+        <a href="#">Round diamond ring</a><span>|</span>
+        <a href="#">Oval diamond ring</a><span>|</span>
+        <a href="#">Pear diamond ring</a><span>|</span>
+        <a href="#">Marquise diamond ring</a><span>|</span>
+        <a href="#">Emerald cut diamond ring</a><span>|</span>
+        <a href="#">Princess cut diamond ring</a><span>|</span>
+        <a href="#">Cushion cut diamond ring</a><span>|</span>
+        <a href="#">Asscher cut diamond ring</a><span>|</span>
+        <a href="#">Three stone diamond ring</a><span>|</span>
+        <a href="#">Toi et Moi ring</a><span>|</span>
+        <a href="#">Eternity band diamond</a><span>|</span>
+        <a href="#">Wedding bands gold</a><span>|</span>
+        <a href="#">Diamond ring Mumbai</a><span>|</span>
+        <a href="#">Diamond ring Hyderabad</a><span>|</span>
+        <a href="#">Diamond ring Pune</a><span>|</span>
+        <a href="#">Diamond ring Noida</a><span>|</span>
+        <a href="#">Lab grown vs natural diamond</a><span>|</span>
+        <a href="#">IGI certified diamond ring</a><span>|</span>
+        <a href="#">Diamond pendants</a><span>|</span>
+        <a href="#">Diamond earrings</a><span>|</span>
+        <a href="#">Tennis bracelets</a><span>|</span>
+        <a href="#">Men's diamond rings</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">© 2026 Truecarat Diamonds Private Limited · CIN: U36912MH2018PTC312345</div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp (desktop) -->
+<a href="https://wa.me/919076009085" class="float-wa" aria-label="Chat on WhatsApp">💬</a>
+
+<!-- Sticky mobile bar -->
+<div class="sticky-bar">
+  <div class="sticky-bar-info">
+    <b>₹ 2,49,826</b>
+    <span>14K Yellow · Size 12</span>
+  </div>
+  <button class="btn btn-primary">Add to Cart</button>
+  <a href="https://wa.me/919076009085" class="sticky-wa" aria-label="WhatsApp">💬</a>
+</div>
+
+<script>
+// Variant selection
+document.querySelectorAll('.opt-row, .size-grid').forEach(group => {
+  group.addEventListener('click', e => {
+    const btn = e.target.closest('.opt');
+    if (!btn) return;
+    group.querySelectorAll('.opt').forEach(o => o.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+
+// Thumb selection
+document.querySelectorAll('.thumb').forEach(thumb => {
+  thumb.addEventListener('click', () => {
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+    const img = thumb.querySelector('img');
+    if (img) document.getElementById('mainImg').src = img.src.replace('width=200', 'width=900');
+  });
+});
+
+// Q&A toggle
+document.querySelectorAll('.qa-q').forEach(q => {
+  q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+});
+
+// Variant selection — metal + size
+document.querySelectorAll('.metal-grid, .size-grid').forEach(group => {
+  group.addEventListener('click', e => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    group.querySelectorAll('button').forEach(o => o.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+
+// Price details collapse
+const priceHead = document.querySelector('.price-details-head');
+if (priceHead) {
+  priceHead.addEventListener('click', () => {
+    priceHead.parentElement.classList.toggle('collapsed');
+  });
+}
+
+// Price tabs (Breakup / Comparison)
+document.querySelectorAll('.price-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const wrap = tab.closest('.price-details');
+    const target = tab.dataset.tab;
+    wrap.querySelectorAll('.price-tab').forEach(t => t.classList.remove('active'));
+    wrap.querySelectorAll('.price-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    wrap.querySelector('#panel-' + target).classList.add('active');
+  });
+});
+
+// Info accordions (Warranty / Care / Package)
+document.querySelectorAll('.info-accordion-head').forEach(head => {
+  head.addEventListener('click', () => head.parentElement.classList.toggle('open'));
+});
+</script>
+
+</body>
+</html>
