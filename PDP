@@ -1423,14 +1423,10 @@ main{padding-bottom:0}
 .certblk h3{margin-bottom:30px!important}
 .certblk-logos{margin-bottom:26px!important}
 .certblk-link{margin-bottom:0!important;margin-top:0!important}
-/* show the True Harvest poster in full (uncropped, correct proportions) */
-.mlux-poster{object-fit:contain!important;background:#0f1420}
-.mways-slide:has(.mlux-poster) .mlux-img{background:#0f1420}
+/* True Harvest poster fills the card (cropped to fit) */
+.mlux-poster{object-fit:cover!important;object-position:center!important;background:#0f1420}
 .mways-slide:has(.mlux-poster) .mlux-shade,
 .mways-slide:has(.mlux-poster) .mlux-body{display:none}
-@media(max-width:768px){
-  .mways-slide:has(.mlux-poster) .mlux{min-height:440px}
-}
 
 </style>
 </head>
