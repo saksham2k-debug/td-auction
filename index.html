@@ -34,6 +34,8 @@ body{font-family:inherit;background:var(--site-bg);color:var(--site-text);min-he
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
 
 /* ── HERO ── */
+.malkin-banner{width:100%;line-height:0;background:#B0B3B6}
+.malkin-banner img{display:block;width:100%;height:auto;aspect-ratio:5/1}
 .hero{background:var(--dark);padding:2.5rem 1.25rem 2.5rem;text-align:center;border-bottom:1px solid rgba(184,150,62,0.2)}
 @media (min-width:600px){.hero{padding:4rem 2rem 3.5rem}}
 .hero-eyebrow{font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
@@ -119,6 +121,8 @@ body{font-family:inherit;background:var(--site-bg);color:var(--site-text);min-he
 
 /* ── PRODUCTS SECTION ── */
 .products-section{max-width:1280px;margin:0 auto;padding:1.5rem 1rem 1.5rem}
+#grid{scroll-margin-top:90px}
+@media (min-width:600px){#grid{scroll-margin-top:110px}}
 @media (min-width:600px){.products-section{padding:3rem 1.5rem 2rem}}
 .section-label{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#999;margin-bottom:2rem;display:flex;align-items:center;gap:12px}
 .section-label::after{content:'';flex:1;height:1px;background:var(--site-border)}
@@ -144,7 +148,7 @@ body{font-family:inherit;background:var(--site-bg);color:var(--site-text);min-he
 .card-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
 .card:not(.sold-out):not(.auction-ended):hover .card-img-wrap img{transform:scale(1.03)}
 .img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#f5f5f5;color:#ccc;font-size:48px}
-.timer-badge{position:absolute;bottom:8px;right:8px;background:rgba(26,20,16,0.82);color:var(--white);font-size:10px;padding:3px 7px;border-radius:3px;letter-spacing:0.03em}
+.timer-badge{position:absolute;bottom:8px;right:8px;background:rgba(26,20,16,0.82);color:var(--white);font-size:9px;padding:2px 6px;border-radius:3px;letter-spacing:0;word-spacing:-0.15em;font-variant-numeric:tabular-nums;white-space:nowrap}
 @media (min-width:600px){.timer-badge{bottom:10px;right:10px;font-size:11px;padding:4px 9px}}
 .timer-badge.ended-timer{background:rgba(192,57,43,0.85)}
 
@@ -319,6 +323,13 @@ body .field label{
 </head>
 <body>
 
+<!-- MALKIN COLLECTION BANNER -->
+<div class="malkin-banner">
+  <img src="https://cdn.shopify.com/s/files/1/0675/4182/7841/files/sky_gap_55.jpg?v=1784792950"
+       alt="The Malkin Collection — Parul Gulati x True Diamond"
+       width="2400" height="480" loading="eager" decoding="async" fetchpriority="high">
+</div>
+
 <!-- HERO -->
 <div class="hero">
   <p class="hero-eyebrow">True Diamond E-Auction</p>
@@ -329,7 +340,7 @@ body .field label{
   <div class="auction-meta">
     <div class="meta-item">
       <span class="meta-label">Auction ends in</span>
-      <div class="meta-value" id="global-timer">--:--:--</div>
+      <div class="meta-value" id="global-timer">--h --m --s</div>
     </div>
     <div class="meta-item">
       <span class="meta-label">Bid in multiples of</span>
@@ -346,7 +357,7 @@ body .field label{
 
 <!-- RULES STRIP -->
 <div class="rules-strip">
-  <p class="rules-text">Ring pricing is based on a standard size 12 ring in 14KT gold. Ring size can be customised and finalised after the winning bid. Any incremental gold weight and making charges will be charged additionally on actuals.</p>
+  <p class="rules-text">Ring pricing is based on a standard size 12 ring in 14KT gold. Ring size and Gold karat can be customised and finalised after the winning bid. Any incremental gold weight and making charges will be charged additionally on actuals.</p>
 </div>
 
 <!-- PRODUCTS -->
@@ -509,6 +520,13 @@ body .field label{
 </div>
 
 <script>
+// ── PRE-WARM CONNECTION to Google Sheets (saves ~300ms on cold load) ──
+['preconnect','dns-prefetch'].forEach(rel => {
+  const l = document.createElement('link');
+  l.rel = rel; l.href = 'https://docs.google.com'; l.crossOrigin = 'anonymous';
+  document.head.appendChild(l);
+});
+
 // ── CONFIG ──
 const FORM_ACTION   = 'https://docs.google.com/forms/d/e/1FAIpQLSfFXoSUqZAGOkMlm2VgYy_rJrETdquJt9ToieqUGd1Aut9sqw/formResponse';
 const ENTRY_NAME    = 'entry.1994883387';
@@ -672,7 +690,7 @@ function timeLeftFor(p) {
   const diff = p.endTime - Date.now();
   if (diff <= 0) return 'ENDED';
   const h = Math.floor(diff/3600000), m = Math.floor((diff%3600000)/60000), s = Math.floor((diff%60000)/1000);
-  return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+  return String(h).padStart(2,'0')+'h '+String(m).padStart(2,'0')+'m '+String(s).padStart(2,'0')+'s';
 }
 
 function isEnded(p) {
@@ -689,7 +707,7 @@ function updateGlobalTimer() {
   if (isPreLaunch()) {
     const diff = auctionStartTime - Date.now();
     const h = Math.floor(diff/3600000), m = Math.floor((diff%3600000)/60000), s = Math.floor((diff%60000)/1000);
-    timerEl.textContent = String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+    timerEl.textContent = String(h).padStart(2,'0')+'h '+String(m).padStart(2,'0')+'m '+String(s).padStart(2,'0')+'s';
     const label = timerEl.parentElement.querySelector('.meta-label');
     if (label) label.textContent = 'Auction starts in';
     return;
@@ -700,12 +718,12 @@ function updateGlobalTimer() {
   const labelEl = timerEl.parentElement.querySelector('.meta-label');
   if (labelEl) labelEl.textContent = 'Auction ends in';
   const activeTimes = products.filter(p => p.endTime && !isEnded(p)).map(p => p.endTime);
-  if (!activeTimes.length) { timerEl.textContent = '00:00:00'; return; }
+  if (!activeTimes.length) { timerEl.textContent = '00h 00m 00s'; return; }
   const latest = new Date(Math.max(...activeTimes));
   const diff = latest - Date.now();
-  if (diff <= 0) { timerEl.textContent = '00:00:00'; return; }
+  if (diff <= 0) { timerEl.textContent = '00h 00m 00s'; return; }
   const h = Math.floor(diff/3600000), m = Math.floor((diff%3600000)/60000), s = Math.floor((diff%60000)/1000);
-  timerEl.textContent = String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+  timerEl.textContent = String(h).padStart(2,'0')+'h '+String(m).padStart(2,'0')+'m '+String(s).padStart(2,'0')+'s';
 }
 
 let _wasPreLaunch = null;
@@ -1076,21 +1094,56 @@ function getFakeBidsFor(p) {
   if (!p || !p.formProduct) return [];
   // Don't show fakes during pre-launch
   if (typeof isPreLaunch === 'function' && isPreLaunch()) return [];
+  if (!auctionStartTime) return []; // need a reference point — no fakes without it
+
   const h = _hashStr(p.formProduct);
   // ~33% of products get 2 fake bids, ~67% get 1 fake bid
   const count = (h % 3 === 0) ? 2 : 1;
-  const base = p.startingBid;
-  const bids = [];
-  // Synthesize realistic timestamps so the list looks natural — within last 6h
-  const now = Date.now();
+  const base   = p.startingBid;
+  const refMs  = auctionStartTime.getTime();
+  const nowMs  = Date.now();
+
+  // Build all scheduled fake bids deterministically — spread across first 30 minutes
+  // Same timestamps shown to every user
+  const allFakes = [];
   for (let k = 1; k <= count; k++) {
-    bids.push({
+    // 1 fake: scheduled around 1-10 min after start
+    // 2 fakes: first at 1-5 min, second at 12-25 min (spread out so it does not look fake)
+    let offsetSec;
+    if (count === 1) {
+      offsetSec = 60 + ((h * 13) % 540); // 1-10 minutes
+    } else {
+      if (k === 1) offsetSec = 60 + ((h * 13) % 240);              // 1-5 minutes
+      else         offsetSec = 720 + ((h * 29 + k * 47) % 780);    // 12-25 minutes
+    }
+    allFakes.push({
       amount: base + (k * 1000),
-      time: new Date(now - (count - k + 1) * (60 + (h % 90)) * 60 * 1000).toISOString(),
-      _fake: true
+      time: new Date(refMs + offsetSec * 1000).toISOString(),
+      _fake: true,
+      _scheduledMs: refMs + offsetSec * 1000
     });
   }
-  return bids; // ascending order
+
+  // SUPPRESSION RULES:
+  // 1. Hide fakes whose scheduled time is in the future (have not "happened" yet)
+  // 2. Find earliest real bid time; hide any fake whose scheduled time is AFTER it
+  //    (real bidder has effectively "taken over" — fake should not appear retroactively)
+  const realBids = (allBidsData[p.formProduct] || []);
+  let earliestRealMs = Infinity;
+  realBids.forEach(rb => {
+    const rbTime = new Date(rb.time).getTime();
+    if (!isNaN(rbTime) && rbTime < earliestRealMs) earliestRealMs = rbTime;
+  });
+
+  const visibleFakes = allFakes.filter(f => {
+    if (f._scheduledMs > nowMs) return false;            // Rule 1: future fake → hide
+    if (f._scheduledMs >= earliestRealMs) return false;  // Rule 2: real bid happened earlier → hide
+    return true;
+  });
+
+  // Sort ascending (older first), then strip internal field before returning
+  visibleFakes.sort((a, b) => new Date(a.time) - new Date(b.time));
+  return visibleFakes.map(f => ({ amount: f.amount, time: f.time, _fake: true }));
 }
 function getEffectiveHighest(p) {
   const real = highestBids[p.formProduct];
@@ -1255,6 +1308,17 @@ document.addEventListener('keydown', e => {
 });
 document.getElementById('overlay').addEventListener('click', e => { if (e.target.id === 'overlay') closeModal(); });
 document.getElementById('bids-overlay').addEventListener('click', e => { if (e.target.id === 'bids-overlay') closeBidsModal(); });
+
+// ── iOS double-tap-to-focus fix ──
+// backdrop-filter on the modal overlays + the slideUp transform animation
+// cause iOS Safari to require two taps before an input opens the keyboard.
+// touchend is a valid user gesture, so a synchronous focus() inside it works.
+document.addEventListener('touchend', function(e){
+  var t = e.target;
+  if (!t || (t.tagName !== 'INPUT' && t.tagName !== 'TEXTAREA')) return;
+  if (document.activeElement === t) return;
+  t.focus();
+}, true);
 
 // ── INIT — fetch both simultaneously ──
 Promise.all([fetchProducts(), fetchBids()]);
